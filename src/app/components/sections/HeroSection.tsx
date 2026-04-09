@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown } from 'lucide-react';
+
 import heroBgImage from '@/assets/hero-bg.jpg';
 
 interface HeroSectionProps {
@@ -13,7 +13,7 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img src={heroBgImage} alt="" className="w-full h-full object-cover fixed-bg" loading="eager" />
-        <div className="absolute inset-0 bg-white/90" />
+        <div className="absolute inset-0 bg-white/90 md:bg-transparent md:bg-gradient-to-r md:from-white md:via-white/90 md:to-transparent" />
       </div>
 
       <div className="relative z-10 w-full">
@@ -54,14 +54,12 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
                 className="group inline-flex items-center justify-center gap-2.5 bg-[#D98324] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-sm sm:text-base hover:bg-[#c27520] transition-colors"
               >
                 無料デモを申し込む
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </a>
               <a
                 href="#about"
                 className="group inline-flex items-center justify-center gap-2.5 bg-white border border-[#3D2C1E]/10 text-[#2C3E40] px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:border-[#D98324]/25 transition-colors"
               >
                 私たちについて
-                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
               </a>
             </div>
 
@@ -77,11 +75,6 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
         </div>
       </div>
 
-      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="w-5 h-9 border-2 border-[#3D2C1E]/12 rounded-full flex justify-center">
-          <div className="w-1 h-1.5 bg-[#D98324]/50 rounded-full mt-2 animate-bounce" />
-        </div>
-      </div>
     </section>
   );
 }
