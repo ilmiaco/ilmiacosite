@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+
 const painPoints = [
   {
     title: '請求できるはずの分を取りこぼしている',
@@ -26,25 +29,65 @@ const painPoints = [
 ];
 
 export default function PainPointsSection() {
+  const [expanded, setExpanded] = useState(false);
+  const MOBILE_PREVIEW = 3;
+
   return (
     <section className="py-20 md:py-28 px-5 sm:px-6 bg-white">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#3D2C1E] mb-4">
-            クリニック経営、<span className="text-[#D98324]">こんな課題</span>はありませんか？
+        {/* Editorial heading */}
+        <div className="mb-14 md:mb-20 reveal">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-xs font-bold tracking-[0.3em] text-[#D98324]">PROBLEMS</span>
+            <div className="h-px flex-1 max-w-[80px] bg-[#D98324]/30" />
+          </div>
+          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
+            クリニック経営、<br className="sm:hidden" />
+            <span className="text-[#D98324]">こんな課題</span>はありませんか？
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {painPoints.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white border border-[#3D2C1E]/8 border-l-[3px] border-l-[#D98324] rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <h3 className="text-sm font-bold text-[#3D2C1E] mb-2 leading-snug">{item.title}</h3>
-              <p className="text-xs text-[#8A9698] leading-[1.8]">{item.description}</p>
+        <div className="max-w-4xl mx-auto reveal reveal-delay-1">
+          <div className="border-t border-[#3D2C1E]/15">
+            {painPoints.map((item, i) => (
+              <div
+                key={i}
+                className={`relative flex gap-5 sm:gap-8 py-7 sm:py-8 border-b border-[#3D2C1E]/15 group hover:bg-[#FAF6F0]/40 transition-colors ${
+                  i >= MOBILE_PREVIEW && !expanded ? 'hidden sm:flex' : ''
+                }`}
+              >
+                {/* Editorial number */}
+                <div className="flex-shrink-0 pt-1">
+                  <div className="flex flex-col items-start gap-1">
+                    <span className="text-xs font-bold tracking-[0.25em] text-[#D98324]">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <div className="h-px w-8 bg-[#D98324]/40" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-bold text-[#3D2C1E] mb-2 leading-snug">{item.title}</h3>
+                  <p className="text-sm sm:text-base text-[#6B7273] leading-[1.9]">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile show-more toggle */}
+          {!expanded && (
+            <div className="sm:hidden mt-6 text-center">
+              <button
+                type="button"
+                onClick={() => setExpanded(true)}
+                className="inline-flex items-center gap-2 text-sm font-bold tracking-wider text-[#D98324] border-b-2 border-[#D98324]/40 pb-1 hover:border-[#D98324] transition-colors"
+              >
+                さらに{painPoints.length - MOBILE_PREVIEW}件の課題を見る
+                <ChevronDown className="w-4 h-4" />
+              </button>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </section>

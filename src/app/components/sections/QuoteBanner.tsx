@@ -9,7 +9,7 @@ export default function QuoteBanner() {
           <br className="hidden sm:block" />
           <span className="text-[#D98324]">請求前の見落としまでチェックされる。</span>」
         </blockquote>
-        <p className="text-sm text-[#8A9698] mt-6">この一連を、ひとつのプラットフォームで。</p>
+        <p className="text-sm text-[#6B7273] mt-6">この一連を、ひとつのプラットフォームで。</p>
       </div>
     </section>
   );

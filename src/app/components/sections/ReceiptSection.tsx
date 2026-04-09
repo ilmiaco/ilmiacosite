@@ -8,15 +8,15 @@ export default function ReceiptSection() {
   return (
     <section id="receipt-ai" className="py-20 md:py-28 px-5 sm:px-6 bg-[#FAF6F0]" aria-labelledby="receipt-heading">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-14 md:mb-20">
-          <div className="inline-flex items-center gap-2 bg-[#3D2C1E]/8 px-4 py-2 rounded-lg mb-5">
-            <FileText className="w-3.5 h-3.5 text-[#3D2C1E]" />
-            <span className="text-[#3D2C1E] text-xs font-semibold tracking-wider">レセプトAI</span>
+        <div className="mb-14 md:mb-20 reveal">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-xs font-bold tracking-[0.3em] text-[#3D2C1E]">レセプトAI</span>
+            <div className="h-px flex-1 max-w-[80px] bg-[#3D2C1E]/30" />
           </div>
-          <h2 id="receipt-heading" className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 text-[#3D2C1E]">
+          <h2 id="receipt-heading" className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
             「漏れを見つけ、収益を守る。」
           </h2>
-          <p className="text-sm sm:text-base text-[#2C3E40]/80 max-w-2xl mx-auto leading-[1.8]">
+          <p className="text-base sm:text-lg text-[#2C3E40]/80 max-w-2xl leading-[2]">
             請求前のチェック、見落としの発見、ルール更新への対応までをAIが支援。
             <br className="hidden sm:block" />
             人の目だけでは見逃しやすいポイントを、提出前に気づけるようにします。
@@ -36,21 +36,21 @@ export default function ReceiptSection() {
           ]}
           illustration={
             <div className="w-full max-w-[300px] sm:max-w-xs mx-auto">
-              <div className="bg-white border border-[#3D2C1E]/8 rounded-lg p-7 shadow-sm">
+              <div className="bg-white border border-[#3D2C1E]/15 p-7">
                 <ShieldCheck className="w-12 h-12 text-[#3D2C1E] mb-5" />
-                <div className="text-xs text-[#8A9698] mb-3">3段階チェック</div>
+                <div className="text-xs text-[#6B7273] mb-3">3段階チェック</div>
                 <div className="space-y-2.5">
                   {[
                     { step: '1', label: '入力内容を確認', detail: '記入済みの情報を整理' },
                     { step: '2', label: '不足を検出', detail: '抜けや違和感を表示' },
                     { step: '3', label: '修正候補を提案', detail: '次に見るべき項目を案内' },
                   ].map((item, i) => (
-                    <div key={i} className="bg-[#3D2C1E]/4 rounded-lg p-3">
+                    <div key={i} className="bg-[#3D2C1E]/5 p-3 border border-[#3D2C1E]/10">
                       <div className="flex items-center gap-2.5">
                         <span className="text-xs font-bold text-[#3D2C1E] bg-white rounded-full w-6 h-6 flex items-center justify-center">{item.step}</span>
                         <div>
                           <div className="text-xs font-bold text-[#3D2C1E]">{item.label}</div>
-                          <div className="text-[10px] text-[#8A9698]">{item.detail}</div>
+                          <div className="text-xs text-[#6B7273]">{item.detail}</div>
                         </div>
                       </div>
                     </div>
@@ -75,9 +75,9 @@ export default function ReceiptSection() {
           ]}
           illustration={
             <div className="w-full max-w-[300px] sm:max-w-xs mx-auto">
-              <div className="bg-white border border-[#3D2C1E]/8 rounded-lg p-7 shadow-sm">
+              <div className="bg-white border border-[#3D2C1E]/15 p-7">
                 <CircleDollarSign className="w-12 h-12 text-[#3D2C1E] mb-5" />
-                <div className="text-xs text-[#8A9698] mb-4">自動チェックの例</div>
+                <div className="text-xs text-[#6B7273] mb-4">自動チェックの例</div>
                 <div className="space-y-2.5">
                   {[
                     '初診・再診まわり',
@@ -94,7 +94,7 @@ export default function ReceiptSection() {
                   ))}
                 </div>
                 <div className="mt-5 pt-4 border-t border-[#3D2C1E]/8">
-                  <div className="text-xs text-[#8A9698]">対応ルール数</div>
+                  <div className="text-xs text-[#6B7273]">対応ルール数</div>
                   <div className="text-2xl font-black text-[#3D2C1E] mt-0.5">10+</div>
                 </div>
               </div>
@@ -115,23 +115,23 @@ export default function ReceiptSection() {
           ]}
           illustration={
             <div className="w-full max-w-[300px] sm:max-w-xs mx-auto">
-              <div className="bg-white border border-[#3D2C1E]/8 rounded-lg p-7 shadow-sm">
+              <div className="bg-white border border-[#3D2C1E]/15 p-7">
                 <Database className="w-12 h-12 text-[#3D2C1E] mb-5" />
-                <div className="text-xs text-[#8A9698] mb-4">自動更新の対象</div>
+                <div className="text-xs text-[#6B7273] mb-4">自動更新の対象</div>
                 <div className="space-y-3">
                   {[
                     { name: '請求ルール', detail: '最新情報を定期反映' },
                     { name: '病名や薬の辞書', detail: '入力候補を新しい状態に' },
                     { name: '院内設定', detail: '運用に合わせて調整可能' },
                   ].map((item, i) => (
-                    <div key={i} className="bg-[#3D2C1E]/4 rounded-lg p-3">
+                    <div key={i} className="bg-[#3D2C1E]/5 p-3 border border-[#3D2C1E]/10">
                       <div className="text-xs font-bold text-[#3D2C1E]">{item.name}</div>
-                      <div className="text-[10px] text-[#8A9698] mt-0.5">{item.detail}</div>
+                      <div className="text-xs text-[#6B7273] mt-0.5">{item.detail}</div>
                     </div>
                   ))}
                 </div>
                 <div className="mt-5 pt-4 border-t border-[#3D2C1E]/8">
-                  <div className="text-xs text-[#8A9698]">同期頻度</div>
+                  <div className="text-xs text-[#6B7273]">同期頻度</div>
                   <div className="text-lg font-black text-[#3D2C1E] mt-0.5">毎月自動</div>
                 </div>
               </div>
@@ -153,9 +153,9 @@ export default function ReceiptSection() {
           ]}
           illustration={
             <div className="w-full max-w-[300px] sm:max-w-xs mx-auto">
-              <div className="bg-white border border-[#3D2C1E]/8 rounded-lg p-7 shadow-sm">
+              <div className="bg-white border border-[#3D2C1E]/15 p-7">
                 <BookOpen className="w-12 h-12 text-[#3D2C1E] mb-5" />
-                <div className="text-xs text-[#8A9698] mb-4">改善サイクル</div>
+                <div className="text-xs text-[#6B7273] mb-4">改善サイクル</div>
                 <div className="space-y-3.5">
                   {[
                     { label: '請求データを提出', color: 'bg-[#D98324]' },
@@ -171,7 +171,7 @@ export default function ReceiptSection() {
                 </div>
                 <div className="mt-5 pt-4 border-t border-[#3D2C1E]/8 text-center">
                   <RefreshCw className="w-5 h-5 text-[#3D2C1E]/40 mx-auto mb-1.5" />
-                  <div className="text-[10px] text-[#8A9698]">同じミスを二度と繰り返さない</div>
+                  <div className="text-xs text-[#6B7273]">同じミスを二度と繰り返さない</div>
                 </div>
               </div>
             </div>

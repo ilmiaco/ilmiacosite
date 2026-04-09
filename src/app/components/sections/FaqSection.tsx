@@ -24,18 +24,45 @@ const faqs = [
 export default function FaqSection() {
   return (
     <section className="py-20 md:py-28 px-5 sm:px-6 bg-white">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#3D2C1E] mb-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Editorial heading */}
+        <div className="mb-14 md:mb-20 reveal">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-xs font-bold tracking-[0.3em] text-[#D98324]">FAQ</span>
+            <div className="h-px flex-1 max-w-[80px] bg-[#D98324]/30" />
+          </div>
+          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
             よくある<span className="text-[#D98324]">ご質問</span>
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="border-t border-[#3D2C1E]/15 reveal reveal-delay-1">
           {faqs.map((item, i) => (
-            <div key={i} className="bg-[#FAF6F0] border border-[#3D2C1E]/8 rounded-lg p-5 sm:p-6">
-              <h3 className="text-sm font-bold text-[#3D2C1E] mb-2.5">{item.q}</h3>
-              <p className="text-xs text-[#2C3E40]/70 leading-[1.8]">{item.a}</p>
+            <div
+              key={i}
+              className="border-b border-[#3D2C1E]/15 py-7 sm:py-8 group"
+            >
+              <div className="flex gap-5 sm:gap-7">
+                {/* Q number marker */}
+                <div className="flex-shrink-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold tracking-[0.25em] text-[#D98324]">
+                      Q.{String(i + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-bold text-[#3D2C1E] mb-3 leading-snug">
+                    {item.q}
+                  </h3>
+                  <div className="flex gap-3 pl-4 border-l-2 border-[#D98324]/40">
+                    <p className="text-sm sm:text-base text-[#2C3E40]/80 leading-[1.9]">
+                      {item.a}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

@@ -3,6 +3,11 @@
 
 @import 'tw-animate-css';
 
+/* Reveal root after app CSS is loaded (prevents FOUC set in index.html) */
+#root {
+  visibility: visible;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,4 +33,40 @@ html {
   will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/* Scroll-triggered fade-in animation using IntersectionObserver-friendly CSS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

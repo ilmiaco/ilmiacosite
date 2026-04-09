@@ -22,44 +22,55 @@ export default function FeatureCard({
   variant = 'accent',
 }: FeatureCardProps) {
   const isAccent = variant === 'accent';
-  const badgeBg = isAccent ? 'bg-[#D98324]/10' : 'bg-[#3D2C1E]/8';
-  const badgeText = isAccent ? 'text-[#D98324]' : 'text-[#3D2C1E]';
-  const checkBg = isAccent ? 'bg-[#D98324]/10' : 'bg-[#3D2C1E]/8';
-  const checkText = isAccent ? 'text-[#D98324]' : 'text-[#3D2C1E]';
+  const accentColor = isAccent ? '#D98324' : '#3D2C1E';
 
-  const content = (
-    <>
-      <div className={`inline-flex items-center gap-2 ${badgeBg} px-3.5 py-1.5 rounded-lg mb-5`}>
-        <span className={`${badgeText} text-xs font-bold`}>{number}</span>
-        <span className={`${badgeText} text-xs font-medium tracking-wide`}>{label}</span>
+  const contentSide = (
+    <div>
+      {/* Number + label badge */}
+      <div className="flex items-center gap-3 mb-6">
+        <span
+          className="text-3xl sm:text-4xl font-black leading-none"
+          style={{ color: accentColor }}
+        >
+          {number}
+        </span>
+        <div className="h-px flex-1 max-w-[60px]" style={{ backgroundColor: `${accentColor}30` }} />
+        <span className="text-xs font-bold tracking-widest" style={{ color: accentColor }}>
+          {label}
+        </span>
       </div>
+
       <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#3D2C1E] mb-5 leading-tight">
         {title}
       </h3>
-      <p className="text-sm sm:text-base text-[#8A9698] leading-[1.8] mb-6">
+      <p className="text-sm sm:text-base text-[#6B7273] leading-[1.8] mb-6">
         {description}
       </p>
       <ul className="space-y-3">
         {checkpoints.map((text, i) => (
           <li key={i} className="flex items-start gap-3 text-sm">
-            <div className={`w-5 h-5 ${checkBg} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
-              <Check className={`w-3 h-3 ${checkText}`} />
-            </div>
+            <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: accentColor }} />
             <span className="text-[#2C3E40]/80 leading-relaxed">{text}</span>
           </li>
         ))}
       </ul>
-    </>
+    </div>
+  );
+
+  const illustrationSide = (
+    <div className="flex justify-center">
+      {illustration}
+    </div>
   );
 
   return (
-    <div className="mb-16 md:mb-24">
+    <div className="mb-12 lg:mb-24 pb-12 lg:pb-0 border-b border-[#3D2C1E]/10 lg:border-b-0 last:border-b-0 last:pb-0 last:mb-0 lg:last:mb-24">
       <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-        <div className={reversed ? 'order-2 lg:order-1 flex justify-center' : ''}>
-          {reversed ? illustration : content}
+        <div className={reversed ? 'order-2 lg:order-1' : ''}>
+          {reversed ? illustrationSide : contentSide}
         </div>
-        <div className={reversed ? 'order-1 lg:order-2' : 'flex justify-center'}>
-          {reversed ? content : illustration}
+        <div className={reversed ? 'order-1 lg:order-2' : ''}>
+          {reversed ? contentSide : illustrationSide}
         </div>
       </div>
     </div>

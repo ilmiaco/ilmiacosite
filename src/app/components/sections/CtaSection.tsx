@@ -10,11 +10,11 @@ export default function CtaSection({ medicalProductUrl }: CtaSectionProps) {
     <section className="py-20 md:py-28 px-5 sm:px-6 bg-[#D98324]/6">
       <div className="max-w-3xl mx-auto text-center">
         <img src={logoImage} alt="ILMIA イルミアテック" className="h-14 md:h-16 w-auto mx-auto mb-7" />
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#3D2C1E] mb-5 leading-tight">
+        <h2 className="text-[1.875rem] sm:text-4xl md:text-4xl font-black text-[#3D2C1E] mb-5 leading-tight">
           クリニック経営を、<br />
           <span className="text-[#D98324]">AIで、次のステージへ。</span>
         </h2>
-        <p className="text-sm sm:text-base text-[#8A9698] mb-9 max-w-xl mx-auto leading-[1.8]">
+        <p className="text-sm sm:text-base text-[#6B7273] mb-9 max-w-xl mx-auto leading-[1.8]">
           電子カルテAIとレセプトAIで、診察の質を上げながら収益を守る。
           <br />
           まずは無料デモで、その効果をお確かめください。
@@ -37,7 +37,7 @@ export default function CtaSection({ medicalProductUrl }: CtaSectionProps) {
             <Mail className="w-4 h-4" />
           </a>
         </div>
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-7 text-xs text-[#8A9698]">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-7 text-xs text-[#6B7273]">
           {['導入相談無料', '院内デモ対応', '既存システム連携相談可'].map((text) => (
             <span key={text} className="flex items-center gap-1.5">
               <Check className="w-3.5 h-3.5 text-[#D98324]" />{text}

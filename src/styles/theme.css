@@ -6,23 +6,23 @@
   --color-accent: #D98324;
   --color-accent-light: #F0B254;
   --color-text: #2C3E40;
-  --color-text-muted: #8A9698;
+  --color-text-muted: #6B7273;
   --color-bg: #FAF6F0;
   --color-surface: #ffffff;
 
-  /* Typography — font sizes */
-  --fs-hero: 2.25rem;
-  --fs-h2: 1.625rem;
-  --fs-h3: 1.0625rem;
-  --fs-footer-h2: 1.75rem;
-  --fs-body: 0.9375rem;
-  --fs-body-sm: 0.8125rem;
-  --fs-caption: 0.6875rem;
+  /* Typography — font sizes (tuned for elderly/medical audience) */
+  --fs-hero: 2.5rem;
+  --fs-h2: 1.875rem;
+  --fs-h3: 1.25rem;
+  --fs-footer-h2: 1.875rem;
+  --fs-body: 1rem;
+  --fs-body-sm: 0.875rem;
+  --fs-caption: 0.75rem;
   --fs-logo-name: 1.375rem;
   --fs-logo-sub: 0.5625rem;
 
-  --font-sans: "Noto Sans JP", sans-serif;
-  --font-heading: "Noto Sans JP", sans-serif;
+  --font-sans: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  --font-heading: "Shippori Mincho", "Noto Sans JP", serif;
   --header-height: 4.75rem;
   --nav-max-width: 72rem;
   --shadow-header: 0 1px 0
@@ -169,24 +169,28 @@
   }
 
   h1 {
+    font-family: var(--font-heading);
     font-size: var(--fs-hero);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   h2 {
+    font-family: var(--font-heading);
     font-size: var(--fs-h2);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   h3 {
+    font-family: var(--font-heading);
     font-size: var(--fs-h3);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;
   }
 
   h4 {
+    font-family: var(--font-heading);
     font-size: var(--fs-body);
     font-weight: var(--font-weight-medium);
     line-height: 1.5;

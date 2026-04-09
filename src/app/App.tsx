@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useReveal } from './hooks/useReveal';
 import AnnouncementBanner from './components/sections/AnnouncementBanner';
 import Header from './components/sections/Header';
 import HeroSection from './components/sections/HeroSection';
@@ -16,6 +17,7 @@ import OtherProductsSection from './components/sections/OtherProductsSection';
 import CtaSection from './components/sections/CtaSection';
 import ContactSection from './components/sections/ContactSection';
 import Footer from './components/sections/Footer';
+import MobileFloatingCta from './components/sections/MobileFloatingCta';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,9 +29,11 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useReveal();
+
   return (
     <div className="min-h-screen bg-surface relative overflow-hidden" itemScope itemType="https://schema.org/WebPage">
-      <AnnouncementBanner medicalProductUrl={medicalProductUrl} />
+      <AnnouncementBanner medicalProductUrl={medicalProductUrl} scrolled={scrolled} />
       <Header scrolled={scrolled} />
 
       <main id="main-content" role="main">
@@ -50,6 +54,7 @@ export default function App() {
       </main>
 
       <Footer medicalProductUrl={medicalProductUrl} />
+      <MobileFloatingCta />
     </div>
   );
 }
