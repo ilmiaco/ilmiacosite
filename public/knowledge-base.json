@@ -1,0 +1,610 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "_metadata": {
+    "name": "ILMIA Knowledge Base",
+    "version": "2.0.0",
+    "lastUpdated": "2026-02-17",
+    "language": ["ja", "en"],
+    "format": "JSON-LD Compatible",
+    "purpose": "Machine-readable company and product information for AI systems, search engines, and integrations"
+  },
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "MedicalOrganization", "Corporation"],
+    "@id": "https://ilmiaco.com/#organization",
+    "name": "株式会社イルミアテック",
+    "legalName": "株式会社イルミアテック",
+    "alternateName": [
+      "ILMIA",
+      "イルミア",
+      "イルミアテック",
+      "Ilmia Tech",
+      "Ilmia Tech Inc.",
+      "Ilmia"
+    ],
+    "url": "https://ilmiaco.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ilmiaco.com/logo-512.png",
+      "width": 512,
+      "height": 512,
+      "encodingFormat": "image/png"
+    },
+    "image": "https://ilmiaco.com/og-image.jpg",
+    "description": {
+      "ja": "大阪を拠点に医療機関向けAIソリューションを開発・提供。脳神経外科医が創業し、医療現場を知るプロが開発するDX-Hub Ilmia、PIBU AI、ドクアシストで医療DXを実現。",
+      "en": "Osaka-based medical AI solutions provider. Founded by a former neurosurgeon, we develop DX-Hub Ilmia, PIBU AI, and DocAssist to enable healthcare digital transformation."
+    },
+    "slogan": {
+      "ja": "医療AIで未来を創る",
+      "en": "Creating the future with Medical AI"
+    },
+    "foundingDate": "2025-09-01",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Osaka, Japan"
+    },
+    "founder": {
+      "@type": "Person",
+      "@id": "https://ilmiaco.com/#founder",
+      "name": {
+        "ja": "フッサム ワファ",
+        "en": "Hussam Wafaa"
+      },
+      "jobTitle": {
+        "ja": "代表取締役 / CEO",
+        "en": "Representative Director / CEO"
+      },
+      "description": {
+        "ja": "脳神経外科医として臨床経験を積んだ後、医療AI企業イルミアテックを創業。",
+        "en": "Former neurosurgeon who founded ILMIA to solve healthcare challenges with AI technology."
+      },
+      "knowsAbout": [
+        "Medical AI",
+        "Healthcare DX",
+        "Neurosurgery",
+        "Clinical Workflow",
+        "HealthTech"
+      ]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "梅田1-2-2-12-12",
+      "addressLocality": "大阪市北区",
+      "addressRegion": "大阪府",
+      "postalCode": "530-0001",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.7024,
+      "longitude": 135.4959
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Japan",
+        "sameAs": "https://www.wikidata.org/wiki/Q17"
+      },
+      {
+        "@type": "State",
+        "name": "大阪府",
+        "sameAs": "https://www.wikidata.org/wiki/Q122723"
+      },
+      {
+        "@type": "State",
+        "name": "愛知県"
+      },
+      {
+        "@type": "State",
+        "name": "東京都"
+      }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+81-70-3195-1578",
+        "contactType": "customer service",
+        "availableLanguage": ["Japanese", "English"],
+        "areaServed": "JP",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "info@ilmiaco.com",
+        "contactType": "sales",
+        "availableLanguage": ["Japanese", "English"]
+      }
+    ],
+    "knowsAbout": [
+      "医療AI",
+      "AI診療支援",
+      "電子カルテ連携",
+      "予約管理システム",
+      "医療DX",
+      "Healthcare AI",
+      "Clinical Decision Support",
+      "EHR Integration",
+      "Practice Management"
+    ],
+    "industry": [
+      "Healthcare Technology",
+      "Medical AI",
+      "Software as a Service",
+      "Health Information Technology"
+    ],
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": "1-10",
+      "unitText": "employees"
+    },
+    "naics": ["541511", "621999"]
+  },
+  "products": [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://ilmiaco.com/#ilmiacall",
+      "name": "イルミアコール",
+      "alternateName": ["ILMIA Call", "Ilmia Recruit"],
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Healthcare Recruitment Platform",
+      "operatingSystem": "Web Browser",
+      "softwareVersion": "1.0",
+      "datePublished": "2026-02-14",
+      "url": "https://recruit.ilmiaco.com/",
+      "description": {
+        "ja": "AI搭載の医療求人プラットフォーム。看護師・医療従事者と医療機関をAIで最適マッチング。求職者は完全無料。",
+        "en": "AI-powered healthcare recruitment platform. Matches nurses and healthcare professionals with medical facilities using AI. Free for job seekers."
+      },
+      "featureList": [
+        {
+          "name": "AI Job Matching",
+          "description": "Intelligent matching of healthcare professionals with suitable positions"
+        },
+        {
+          "name": "Hospital Directory",
+          "description": "Comprehensive directory of partner medical facilities across Japan"
+        },
+        {
+          "name": "Application Management",
+          "description": "Streamlined job application and tracking system"
+        },
+        {
+          "name": "Multi-Specialty Support",
+          "description": "Positions for nurses, midwives, physical therapists, radiologic technologists, and more"
+        }
+      ],
+      "targetAudience": [
+        "Nurses",
+        "Midwives",
+        "Physical Therapists",
+        "Radiologic Technologists",
+        "Clinical Laboratory Technicians",
+        "Healthcare Facilities",
+        "Hospitals"
+      ],
+      "availability": "https://schema.org/InStock",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "JPY",
+        "price": "0",
+        "availability": "https://schema.org/InStock",
+        "description": "Free for job seekers"
+      },
+      "provider": {
+        "@id": "https://ilmiaco.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://ilmiaco.com/#dx-hub-ilmia",
+      "name": "DX-Hub Ilmia",
+      "alternateName": ["デンタルワン", "DentalOne"],
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "Medical Practice Management",
+      "operatingSystem": "Web Browser",
+      "softwareVersion": "1.0",
+      "datePublished": "2025-09-01",
+      "description": {
+        "ja": "医療機関向け予約管理システム。AI連携を前提とした設計で院内オペレーションを最適化。",
+        "en": "Medical appointment management system with AI-integrated design for optimizing clinic operations."
+      },
+      "featureList": [
+        {
+          "name": "AI-Integrated Scheduling",
+          "description": "Intelligent appointment booking with conflict detection"
+        },
+        {
+          "name": "Patient Data Management",
+          "description": "Centralized patient records and visit history"
+        },
+        {
+          "name": "Insurance Integration",
+          "description": "Japanese healthcare insurance (レセプト) compliance"
+        },
+        {
+          "name": "Automated Reminders",
+          "description": "SMS/Email appointment reminders"
+        },
+        {
+          "name": "Multi-Device Support",
+          "description": "Responsive design for desktop, tablet, mobile"
+        }
+      ],
+      "targetAudience": [
+        "General Clinics",
+        "Medical Corporations",
+        "Dental Clinics",
+        "Small Hospitals"
+      ],
+      "availability": "https://schema.org/InStock",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "JPY",
+        "price": "Contact for pricing",
+        "availability": "https://schema.org/InStock"
+      },
+      "provider": {
+        "@id": "https://ilmiaco.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://ilmiaco.com/#pibu-ai",
+      "name": "PIBU AI",
+      "alternateName": ["ピブ エーアイ", "ピブAI", "PIBU"],
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "Beauty Clinic Management",
+      "operatingSystem": "Web Browser",
+      "description": {
+        "ja": "美容クリニック向け統合AIプラットフォーム。予約から診療、レセプトまで一気通貫で管理。AIカウンセラー機能搭載。",
+        "en": "Integrated AI platform for beauty clinics. End-to-end management from appointments to billing with AI counselor functionality."
+      },
+      "featureList": [
+        {
+          "name": "AI Counselor",
+          "description": "Automated patient consultation and recommendation engine"
+        },
+        {
+          "name": "End-to-End Clinic Management",
+          "description": "Appointment to checkout workflow"
+        },
+        {
+          "name": "Treatment Scheduling",
+          "description": "Procedure-specific booking and resource allocation"
+        },
+        {
+          "name": "Customer Records",
+          "description": "Before/after documentation and treatment history"
+        },
+        {
+          "name": "Revenue Analytics",
+          "description": "Sales performance and financial forecasting"
+        }
+      ],
+      "targetAudience": [
+        "Cosmetic Surgery Clinics",
+        "Aesthetic Dermatology",
+        "Medical Spas",
+        "Beauty Clinics"
+      ],
+      "availability": "https://schema.org/PreOrder",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "JPY",
+        "price": "Contact for pricing",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "provider": {
+        "@id": "https://ilmiaco.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://ilmiaco.com/#docassist",
+      "name": "DocAssist",
+      "alternateName": ["ドクアシスト", "Doc Assist"],
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "Clinical Decision Support",
+      "operatingSystem": "Web Browser",
+      "softwareVersion": "1.0",
+      "datePublished": "2026-01-08",
+      "description": {
+        "ja": "AI問診・診療支援システム。リアルタイム診療支援と電子カルテ連携を実現。医師の診療をAIがサポート。",
+        "en": "AI-powered clinical decision support system with real-time physician assistance and EHR integration."
+      },
+      "featureList": [
+        {
+          "name": "AI Patient Intake",
+          "description": "Intelligent symptom collection with NLP"
+        },
+        {
+          "name": "Real-Time Clinical Support",
+          "description": "Differential diagnosis and treatment suggestions"
+        },
+        {
+          "name": "EHR Integration",
+          "description": "Seamless connection with major Japanese EHR systems"
+        },
+        {
+          "name": "Symptom Analysis AI",
+          "description": "Pattern recognition and risk stratification"
+        },
+        {
+          "name": "Automated Documentation",
+          "description": "Clinical note generation and encounter summaries"
+        }
+      ],
+      "targetAudience": [
+        "General Hospitals",
+        "General Clinics",
+        "Beauty Clinics",
+        "Internal Medicine"
+      ],
+      "availability": "https://schema.org/InStock",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "JPY",
+        "price": "Contact for pricing",
+        "availability": "https://schema.org/InStock"
+      },
+      "provider": {
+        "@id": "https://ilmiaco.com/#organization"
+      }
+    }
+  ],
+  "services": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": {
+        "ja": "医療AI導入コンサルティング",
+        "en": "Medical AI Implementation Consulting"
+      },
+      "serviceType": "Consulting",
+      "description": {
+        "ja": "医療機関へのAI導入支援。ニーズ分析から実装、運用サポートまで。",
+        "en": "AI implementation support for healthcare facilities from needs assessment to deployment."
+      },
+      "provider": {
+        "@id": "https://ilmiaco.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": {
+        "ja": "システムインテグレーション",
+        "en": "System Integration"
+      },
+      "serviceType": "IT Services",
+      "description": {
+        "ja": "電子カルテ等既存システムとの連携開発。",
+        "en": "Integration development with existing EHR and other systems."
+      },
+      "provider": {
+        "@id": "https://ilmiaco.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": {
+        "ja": "トレーニング・サポート",
+        "en": "Training & Support"
+      },
+      "serviceType": "Support Services",
+      "description": {
+        "ja": "スタッフ研修、運用サポート、システム保守。",
+        "en": "Staff training, operational support, and system maintenance."
+      },
+      "provider": {
+        "@id": "https://ilmiaco.com/#organization"
+      }
+    }
+  ],
+  "medicalSpecialties": [
+    {
+      "code": "GP",
+      "name": {
+        "ja": "一般診療",
+        "en": "General Practice"
+      }
+    },
+    {
+      "code": "DENT",
+      "name": {
+        "ja": "歯科",
+        "en": "Dentistry"
+      }
+    },
+    {
+      "code": "DERM",
+      "name": {
+        "ja": "皮膚科",
+        "en": "Dermatology"
+      }
+    },
+    {
+      "code": "PLAST",
+      "name": {
+        "ja": "形成外科",
+        "en": "Plastic Surgery"
+      }
+    },
+    {
+      "code": "COSM",
+      "name": {
+        "ja": "美容外科",
+        "en": "Cosmetic Surgery"
+      }
+    },
+    {
+      "code": "IM",
+      "name": {
+        "ja": "内科",
+        "en": "Internal Medicine"
+      }
+    },
+    {
+      "code": "ORTH",
+      "name": {
+        "ja": "整形外科",
+        "en": "Orthopedics"
+      }
+    },
+    {
+      "code": "PED",
+      "name": {
+        "ja": "小児科",
+        "en": "Pediatrics"
+      }
+    },
+    {
+      "code": "OBGYN",
+      "name": {
+        "ja": "産婦人科",
+        "en": "Obstetrics & Gynecology"
+      }
+    },
+    {
+      "code": "OPHTH",
+      "name": {
+        "ja": "眼科",
+        "en": "Ophthalmology"
+      }
+    },
+    {
+      "code": "ENT",
+      "name": {
+        "ja": "耳鼻咽喉科",
+        "en": "Otolaryngology"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "ja": "イルミアテックの医療AIシステムはどのような医療機関で利用できますか？",
+        "en": "What types of medical facilities can use ILMIA products?"
+      },
+      "answer": {
+        "ja": "一般クリニック、医療法人、美容外科、美容皮膚科、一般病院など、幅広い医療機関でご利用いただけます。",
+        "en": "General clinics, medical corporations, cosmetic surgery, aesthetic dermatology, and general hospitals."
+      }
+    },
+    {
+      "question": {
+        "ja": "導入にはどのくらいの期間がかかりますか？",
+        "en": "How long does implementation take?"
+      },
+      "answer": {
+        "ja": "DX-Hub Ilmiaは最短2週間程度で導入可能です。製品や規模により異なります。",
+        "en": "DX-Hub Ilmia can be deployed in as little as 2 weeks. Timeline varies by product and facility size."
+      }
+    },
+    {
+      "question": {
+        "ja": "既存の電子カルテシステムとの連携は可能ですか？",
+        "en": "Can your systems integrate with existing EHR?"
+      },
+      "answer": {
+        "ja": "はい、主要な電子カルテシステムとの連携に対応しています。ドクアシストは電子カルテ連携機能を標準搭載。",
+        "en": "Yes, we support integration with major Japanese EHR systems. DocAssist includes standard EHR integration."
+      }
+    },
+    {
+      "question": {
+        "ja": "セキュリティ対策はどのようになっていますか？",
+        "en": "What security measures are in place?"
+      },
+      "answer": {
+        "ja": "暗号化通信、アクセス制御、定期的なセキュリティ監査など、医療情報システムに求められる高いセキュリティ基準を満たしています。",
+        "en": "Encrypted communications, access controls, regular security audits meeting healthcare information system standards."
+      }
+    },
+    {
+      "question": {
+        "ja": "無料相談やデモは可能ですか？",
+        "en": "Is a demo available?"
+      },
+      "answer": {
+        "ja": "はい、無料でご相談・デモを承っております。お問い合わせフォームまたはお電話よりご連絡ください。",
+        "en": "Yes, free consultations and demos are available. Contact us via our form or phone."
+      }
+    }
+  ],
+  "keywords": {
+    "ja": [
+      "医療AI",
+      "AI診療支援",
+      "医療IT",
+      "クリニック予約システム",
+      "電子カルテ連携",
+      "AI問診",
+      "美容クリニックシステム",
+      "医療DX",
+      "ILMIA",
+      "イルミアテック",
+      "イルミアコール",
+      "医療求人",
+      "看護師求人",
+      "医療人材マッチング",
+      "DX-Hub Ilmia",
+      "PIBU AI",
+      "ドクアシスト",
+      "大阪",
+      "梅田",
+      "医療ソフトウェア",
+      "病院システム",
+      "レセプト",
+      "予約管理システム",
+      "ヘルステック"
+    ],
+    "en": [
+      "Medical AI",
+      "Healthcare AI",
+      "Clinical Decision Support",
+      "Clinic Management System",
+      "EHR Integration",
+      "AI Diagnosis",
+      "Beauty Clinic Software",
+      "Healthcare DX",
+      "Healthcare Recruitment",
+      "Nurse Job Matching",
+      "ILMIA",
+      "Ilmia Tech",
+      "ILMIA Call",
+      "DX-Hub Ilmia",
+      "PIBU AI",
+      "DocAssist",
+      "Osaka Japan",
+      "Medical Software",
+      "HealthTech",
+      "Practice Management"
+    ]
+  },
+  "links": {
+    "website": "https://ilmiaco.com",
+    "recruit": "https://recruit.ilmiaco.com",
+    "contact": "https://ilmiaco.com/#contact",
+    "about": "https://ilmiaco.com/#about",
+    "products": "https://ilmiaco.com/#products",
+    "scenarios": "https://ilmiaco.com/#scenarios",
+    "news": "https://ilmiaco.com/#news",
+    "llmsTxt": "https://ilmiaco.com/llms.txt",
+    "wellKnownLlmsTxt": "https://ilmiaco.com/.well-known/llms.txt",
+    "llmsFullTxt": "https://ilmiaco.com/llms-full.txt",
+    "sitemap": "https://ilmiaco.com/sitemap.xml",
+    "robotsTxt": "https://ilmiaco.com/robots.txt"
+  }
+}

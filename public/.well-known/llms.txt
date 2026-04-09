@@ -1,0 +1,20 @@
+# ILMIA LLM Discovery
+# Canonical LLM file: https://ilmiaco.com/llms.txt
+# Last Updated: 2026-02-17
+
+This is the .well-known discovery endpoint for AI crawlers.
+
+Primary source:
+- https://ilmiaco.com/llms.txt
+
+Extended sources:
+- https://ilmiaco.com/llms-full.txt
+- https://ilmiaco.com/knowledge-base.json
+- https://ilmiaco.com/api-directory.json
+- https://ilmiaco.com/sitemap.xml
+- https://ilmiaco.com/robots.txt
+
+Key focus areas:
+- Medical AI for Japan (医療AI)
+- AI問診 / 診療支援 / 予約管理 / 電子カルテ連携
+- Scenarios: 一般クリニック, 一般病院, 歯科医院, 美容クリニック

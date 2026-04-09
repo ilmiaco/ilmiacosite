@@ -1,0 +1,154 @@
+# =====================================================
+# HTTP Headers for ILMIA - イルミアテック
+# https://ilmiaco.com
+# Optimized for Security, Performance & SEO
+# =====================================================
+
+# Global Headers - Default no-cache for all pages (SPA routing)
+/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://tagmanager.google.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://firebase.googleapis.com https://firestore.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com; frame-src 'self' https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io; upgrade-insecure-requests
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+# HTML Files - No cache for SPA routing
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  X-Content-Type-Options: nosniff
+
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Link: </favicon-32x32.png>; rel=preload; as=image
+
+# JavaScript - Long cache with immutable
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+
+/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# CSS - Long cache with immutable (hashed assets only)
+/assets/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css; charset=utf-8
+
+/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Images - Short cache for root (no hash), long cache for /assets/
+/assets/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*.jpg
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*.jpeg
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*.webp
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*.avif
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# SVG - Week cache
+/*.svg
+  Cache-Control: public, max-age=604800
+  Content-Type: image/svg+xml
+
+# Favicon
+/*.ico
+  Cache-Control: public, max-age=604800
+
+# Fonts - Long cache
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# PWA Manifest
+/manifest.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json
+
+# SEO Files
+/robots.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
+
+# OpenSearch Description
+/opensearch.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/opensearchdescription+xml; charset=utf-8
+
+# AI/LLM Discovery Files
+/llms.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: index, follow
+  Access-Control-Allow-Origin: *
+
+/llms-full.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: index, follow
+  Access-Control-Allow-Origin: *
+
+# Machine-Readable Data Files
+/knowledge-base.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index, follow
+  Access-Control-Allow-Origin: *
+
+/api-directory.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: index, follow
+  Access-Control-Allow-Origin: *
+
+# Browser Config
+/browserconfig.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
+
+# Security & Info Files
+/.well-known/llms.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: index, follow
+  Access-Control-Allow-Origin: *
+
+/.well-known/*
+  Cache-Control: public, max-age=86400
+
+/humans.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
+# 404 Page
+/404.html
+  Cache-Control: no-cache
+  X-Robots-Tag: noindex, nofollow

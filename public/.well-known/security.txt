@@ -1,0 +1,27 @@
+# Security Policy for ILMIA (Ilmia Tech Inc.)
+# https://ilmiaco.com
+
+# Contact for security issues
+Contact: mailto:security@ilmia.jp
+Contact: mailto:info@ilmiaco.com
+
+# Preferred Languages
+Preferred-Languages: ja, en
+
+# Security Policy
+Policy: https://ilmiaco.com/#contact
+
+# Expiration Date (update annually)
+Expires: 2027-01-11T00:00:00.000Z
+
+# Encryption (if applicable)
+# Encryption: https://ilmiaco.com/.well-known/pgp-key.txt
+
+# Acknowledgments
+# Acknowledgments: https://ilmiaco.com/security-acknowledgments
+
+# Hiring
+# Hiring: https://ilmiaco.com/careers
+
+# Canonical URL
+Canonical: https://ilmiaco.com/.well-known/security.txt

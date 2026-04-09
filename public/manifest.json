@@ -1,0 +1,134 @@
+{
+  "name": "ILMIA - イルミアテック | 医療AIソリューション",
+  "short_name": "ILMIA",
+  "description": "最先端のAI技術で医療の未来を切り拓く。DX-Hub Ilmia、PIBU AI、ドクアシストなど医療機関向けAIソリューションを提供。",
+  "start_url": "/?source=pwa",
+  "id": "ilmia-medical-ai",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ja",
+  "dir": "ltr",
+  "categories": ["medical", "business", "health", "productivity"],
+  "iarc_rating_id": "",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "ILMIA - 医療AIソリューション"
+    },
+    {
+      "src": "/og-image-square.jpg",
+      "sizes": "1200x1200",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "ILMIA - 医療AIソリューション（スクエア）"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "お問い合わせ",
+      "short_name": "Contact",
+      "description": "お問い合わせフォームを開く",
+      "url": "/#contact?source=shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "製品情報",
+      "short_name": "Products",
+      "description": "製品情報を見る",
+      "url": "/#products?source=shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "会社概要",
+      "short_name": "About",
+      "description": "会社情報を見る",
+      "url": "/#about?source=shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "ニュース",
+      "short_name": "News",
+      "description": "最新ニュースを見る",
+      "url": "/#news?source=shortcut",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}

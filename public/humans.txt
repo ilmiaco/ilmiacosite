@@ -1,0 +1,33 @@
+/* TEAM */
+Company: Ilmia Tech Inc. (株式会社イルミアテック)
+Founder: Hussam Wafaa (フッサム ワファ)
+Role: CEO & Founder
+Location: Osaka, Japan (大阪府大阪市北区梅田)
+
+/* THANKS */
+Special thanks to all our medical partners and healthcare professionals
+who help us build better AI solutions for the medical industry.
+
+/* SITE */
+Last update: 2026/01/11
+Language: Japanese / English
+Doctype: HTML5
+Framework: React 18 + Vite + TypeScript
+CSS: Tailwind CSS v4
+Hosting: Firebase Hosting
+Components: Radix UI, Motion (Framer)
+
+/* PRODUCTS */
+DX-Hub Ilmia: Medical facility appointment management system
+PIBU AI: Beauty clinic integrated AI platform
+DocAssist: AI consultation & diagnosis support system
+
+/* CONTACT */
+Website: https://ilmiaco.com
+Email: info@ilmiaco.com
+Phone: +81-6-1234-5678
+
+/* STANDARDS */
+Accessibility: WCAG 2.1 AA
+SEO: Schema.org structured data
+PWA: Progressive Web App enabled

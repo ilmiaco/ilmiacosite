@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ilmiaco.com/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ilmiaco.com/og-image.jpg</image:loc>
+      <image:title>ILMIA イルミアテック - 医療AIソリューション</image:title>
+      <image:caption>医療AI・クリニック向けAIソリューション</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ilmiaco.com/og-image-square.jpg</image:loc>
+      <image:title>ILMIA イルミアテック - 医療AIソリューション（スクエア）</image:title>
+      <image:caption>SNS共有向けスクエアOG画像</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ilmiaco.com/logo-512.png</image:loc>
+      <image:title>ILMIA ロゴ</image:title>
+      <image:caption>株式会社イルミアテック公式ロゴ</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ilmiaco.com/llms.txt</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ilmiaco.com/.well-known/llms.txt</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ilmiaco.com/llms-full.txt</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ilmiaco.com/knowledge-base.json</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ilmiaco.com/api-directory.json</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

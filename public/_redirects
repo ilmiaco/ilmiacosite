@@ -1,0 +1,36 @@
+# =====================================================
+# Redirects for ILMIA - イルミアテック
+# Firebase/Netlify compatible
+# =====================================================
+
+# SPA fallback - all routes to index.html
+/*    /index.html   200
+
+# Clean URLs (remove trailing slashes)
+/about/    /#about    301
+/products/    /#products    301
+/news/    /#news    301
+/contact/    /#contact    301
+
+# Common misspellings and alternate URLs
+/home    /    301
+/index    /    301
+/index.html    /    301
+
+# Japanese alternate URLs
+/会社概要    /#about    301
+/製品    /#products    301
+/お問い合わせ    /#contact    301
+/ニュース    /#news    301
+
+# Product direct links
+/DX-Hub Ilmia    /#products    301
+/pibu-ai    /#products    301
+/docassist    /#products    301
+/doc-assist    /#products    301
+
+# Well-known URLs
+/.well-known/security.txt    /.well-known/security.txt    200
+
+# Error pages
+/404    /404.html    404

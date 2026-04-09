@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - ページが見つかりません | ILMIA イルミアテック</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="お探しのページは見つかりませんでした。ILMIA イルミアテックのホームページへお戻りください。">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="404 - ページが見つかりません | ILMIA">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ilmiaco.com/404">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #0891b2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: bold;
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #2563eb;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: white;
+      opacity: 0.8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: opacity 0.2s;
+    }
+
+    .links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .error-code {
+        font-size: 80px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "404 - ページが見つかりません",
+    "description": "お探しのページは見つかりませんでした。",
+    "url": "https://ilmiaco.com/404",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ILMIA イルミアテック",
+      "url": "https://ilmiaco.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="/favicon.svg" alt="ILMIA ロゴ" class="logo">
+    <div class="error-code">404</div>
+    <h1>ページが見つかりません</h1>
+    <p>
+      お探しのページは削除されたか、URLが変更された可能性があります。<br>
+      お手数ですが、トップページからお探しください。
+    </p>
+    <a href="/" class="btn">トップページへ戻る</a>
+
+    <div class="links">
+      <a href="/#about">会社概要</a>
+      <a href="/#products">製品情報</a>
+      <a href="/#news">ニュース</a>
+      <a href="/#contact">お問い合わせ</a>
+    </div>
+  </div>
+
+  <!-- Google Analytics (if configured) -->
+  <script>
+    // Track 404 errors
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'page_not_found', {
+        'page_location': window.location.href,
+        'page_referrer': document.referrer
+      });
+    }
+  </script>
+</body>
+</html>

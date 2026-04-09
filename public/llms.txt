@@ -1,0 +1,146 @@
+# ILMIA - イルミアテック株式会社
+# AI-Friendly Information File for LLM Crawlers
+# Last Updated: 2026-02-17
+# Language: Japanese (Primary), English (Secondary)
+
+## COMPANY OVERVIEW
+
+Company Name: 株式会社イルミアテック (Ilmia Tech Inc.)
+Brand Name: ILMIA (イルミア)
+Website: https://ilmiaco.com
+Founded: September 2025
+Industry: Healthcare Technology / Medical AI
+Headquarters: Osaka, Japan
+
+## MISSION
+
+We develop AI-powered solutions for healthcare providers to improve patient care, streamline operations, and enable digital transformation in medical facilities across Japan.
+
+## CONTACT INFORMATION
+
+- Phone: 070-3195-1578
+- Email: info@ilmiaco.com
+- Address: 梅田1-2-2-12-12, 大阪市北区, 大阪府 530-0001, Japan
+- Coordinates: 34.7024, 135.4959
+- Business Hours: Monday-Friday, 09:00-18:00 JST
+
+## FOUNDER
+
+Name: Hussam Wafaa (フッサム ワファ)
+Title: CEO / Founder
+Background: Former Neurosurgeon
+Expertise: Medical AI, Healthcare DX, Neurosurgery
+
+## PRODUCTS & SERVICES
+
+### 1. DX-Hub Ilmia (デンタルワン)
+Type: Medical Appointment Management System
+Target: General Clinics, Medical Corporations, Hospitals
+Features:
+- AI-integrated scheduling
+- Patient data management
+- Insurance claim (receipt) integration
+- Automated reminders
+- Multi-device support
+Status: Available
+
+### 2. PIBU AI (ピブ エーアイ)
+Type: Integrated AI Platform for Beauty Clinics
+Target: Cosmetic Surgery, Aesthetic Dermatology
+Features:
+- AI Counselor functionality
+- End-to-end clinic management
+- Treatment scheduling
+- Customer records management
+- Revenue analytics dashboard
+Status: Pre-order / Coming Soon
+
+### 3. DocAssist (ドクアシスト)
+Type: AI Clinical Decision Support System
+Target: General Hospitals, Clinics, Beauty Clinics
+Features:
+- AI-powered patient intake/questionnaire
+- Real-time clinical decision support
+- Electronic Health Record (EHR) integration
+- Symptom analysis AI
+- Automated medical documentation
+Status: Available (Released January 2026)
+
+## SERVICE AREAS
+
+Primary: Osaka Prefecture (大阪府)
+Secondary: Aichi Prefecture (愛知県), Tokyo (東京都)
+Coverage: All of Japan
+
+## SCENARIO COVERAGE
+
+- 一般クリニック: 予約管理 + AI問診 + 電子カルテ連携
+- 一般病院: 外来トリアージ + 診療支援AI + 情報連携
+- 歯科医院: 歯科向け予約運用 + 再来院フォロー
+- 美容クリニック: カウンセリング + 顧客管理 + レセプト対応
+
+## MEDICAL SPECIALTIES SUPPORTED
+
+- General Practice (一般診療)
+- Dentistry (歯科)
+- Dermatology (皮膚科)
+- Plastic Surgery / Cosmetic Surgery (形成外科・美容外科)
+- Internal Medicine (内科)
+- Orthopedics (整形外科)
+
+## KEY DIFFERENTIATORS
+
+1. Founded by a physician who understands clinical workflows
+2. AI-first architecture designed for healthcare
+3. EHR/EMR integration capabilities
+4. Japanese healthcare system compliance (レセプト対応)
+5. Security-focused design for medical data
+
+## FREQUENTLY ASKED QUESTIONS
+
+Q: What types of medical facilities can use ILMIA products?
+A: General clinics, medical corporations, beauty clinics, cosmetic surgery, dermatology, and general hospitals.
+
+Q: How long does implementation take?
+A: DX-Hub Ilmia can be deployed in as little as 2 weeks. Other products vary by facility size.
+
+Q: Can your systems integrate with existing EHR/EMR?
+A: Yes, DocAssist includes standard EHR integration capabilities.
+
+Q: What security measures are in place?
+A: We implement encrypted communications, access controls, and regular security audits meeting healthcare information system standards.
+
+Q: Is a demo available?
+A: Yes, free consultations and demos are available. Contact us at info@ilmiaco.com or 070-3195-1578.
+
+## KEYWORDS / TAGS
+
+医療AI, AI診療支援, 医療IT, クリニック予約システム, 電子カルテ連携, AI問診, 美容クリニックシステム, 医療DX, ILMIA, イルミアテック, DX-Hub Ilmia, PIBU AI, ドクアシスト, 大阪, 梅田, 医療ソフトウェア, 病院システム, レセプト, 予約管理システム, Healthcare AI, Medical Software, Clinic Management, Japan Healthcare Tech
+
+## STRUCTURED DATA REFERENCE
+
+For complete structured data (JSON-LD), see:
+- https://ilmiaco.com/ (embedded in HTML)
+- https://ilmiaco.com/.well-known/llms.txt (well-known discovery endpoint)
+- https://ilmiaco.com/llms-full.txt (expanded data)
+- https://ilmiaco.com/knowledge-base.json (machine-readable)
+
+## API / INTEGRATION INFORMATION
+
+For technical integration details, see:
+- https://ilmiaco.com/api-directory.json
+
+## SOCIAL PROFILES
+
+(Coming Soon)
+
+## LEGAL
+
+Company Registration: Japan
+Privacy Policy: Available upon request
+Terms of Service: Available upon request
+
+---
+# End of llms.txt
+# For more detailed information suitable for AI training/knowledge bases,
+# please see llms-full.txt

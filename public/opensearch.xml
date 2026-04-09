@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+
+  <!-- Basic Information -->
+  <ShortName>ILMIA</ShortName>
+  <LongName>ILMIA イルミアテック - 医療AIソリューション</LongName>
+  <Description>Search ILMIA medical AI solutions, products, and healthcare technology information. 医療AI、クリニックシステム、電子カルテ連携などの情報を検索。</Description>
+
+  <!-- Search Configuration -->
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Language>ja</Language>
+
+  <!-- Search URL Template -->
+  <Url type="text/html"
+       template="https://ilmiaco.com/?search={searchTerms}"
+       method="GET"/>
+
+  <!-- Suggestions URL (for autocomplete) -->
+  <Url type="application/x-suggestions+json"
+       template="https://ilmiaco.com/api/suggest?q={searchTerms}"/>
+
+  <!-- Images -->
+  <Image width="16" height="16" type="image/svg+xml">https://ilmiaco.com/favicon.svg</Image>
+  <Image width="64" height="64" type="image/svg+xml">https://ilmiaco.com/favicon.svg</Image>
+
+  <!-- Additional Metadata -->
+  <Contact>info@ilmiaco.com</Contact>
+  <Developer>株式会社イルミアテック</Developer>
+  <Attribution>Search powered by ILMIA</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+
+  <!-- Tags/Keywords -->
+  <Tags>医療AI medical AI healthcare クリニック clinic 予約 appointment 電子カルテ EHR 大阪 osaka japan</Tags>
+
+  <!-- Mozilla-specific extensions -->
+  <moz:SearchForm>https://ilmiaco.com/</moz:SearchForm>
+  <moz:UpdateUrl>https://ilmiaco.com/opensearch.xml</moz:UpdateUrl>
+  <moz:IconUpdateUrl>https://ilmiaco.com/favicon.svg</moz:IconUpdateUrl>
+  <moz:UpdateInterval>7</moz:UpdateInterval>
+
+</OpenSearchDescription>

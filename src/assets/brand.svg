@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
+  <path
+    d="M 40 160 L 100 160 L 125 120 L 150 180 L 185 60 L 230 240 L 260 160 L 320 160"
+    fill="none"
+    stroke="#3D2C1E"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text
+    x="340"
+    y="170"
+    font-family="'Noto Sans JP', sans-serif"
+    font-weight="900"
+    font-size="130"
+    fill="#3D2C1E"
+    letter-spacing="4"
+  >ILMIA</text>
+  <text
+    x="345"
+    y="240"
+    font-family="'Noto Sans JP', sans-serif"
+    font-weight="700"
+    font-size="55"
+    fill="#3D2C1E"
+    letter-spacing="6"
+  >イルミアテック</text>
+</svg>

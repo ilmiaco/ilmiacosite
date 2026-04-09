@@ -1,0 +1,31 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset scroll targets so they don't hide behind fixed navbar + announcement banner */
+[id] {
+  scroll-margin-top: 110px;
+}
+
+@media (min-width: 768px) {
+  [id] {
+    scroll-margin-top: 120px;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Prevent hero background from resizing on mobile scroll (address bar show/hide) */
+.fixed-bg {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
