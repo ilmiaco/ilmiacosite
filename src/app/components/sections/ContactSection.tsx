@@ -88,7 +88,7 @@ export default function ContactSection() {
                 id="message"
                 name="message"
                 rows={5}
-                className="w-full px-4 py-3.5 text-base border-2 border-[#3D2C1E]/15 rounded-lg focus:border-[#D98324] outline-none resize-none bg-transparent transition-colors"
+                className="w-full px-4 py-3.5 text-base border border-[#3D2C1E]/15 focus:border-[#D98324] outline-none resize-none bg-transparent transition-colors"
                 placeholder="ご質問やご希望などをご記入ください。"
                 required
               />
@@ -111,7 +111,7 @@ export default function ContactSection() {
           <div className="text-center">
             <button
               type="submit"
-              className="inline-flex items-center justify-center bg-[#D98324] px-14 py-4 sm:py-5 rounded-lg font-bold text-white text-base sm:text-lg hover:bg-[#c27520] transition-colors min-w-[280px]"
+              className="inline-flex items-center justify-center bg-[#D98324] px-14 py-4 sm:py-5 font-bold text-white text-base sm:text-lg hover:bg-[#c27520] transition-colors min-w-[280px]"
             >
               送信する
             </button>

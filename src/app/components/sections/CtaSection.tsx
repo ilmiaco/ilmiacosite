@@ -24,14 +24,14 @@ export default function CtaSection({ medicalProductUrl }: CtaSectionProps) {
             href={medicalProductUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-2.5 bg-[#D98324] text-white px-7 py-3.5 sm:px-9 sm:py-4 rounded-lg font-bold text-sm sm:text-base hover:bg-[#c27520] transition-colors"
+            className="group inline-flex items-center justify-center gap-2.5 bg-[#D98324] text-white px-7 py-3.5 sm:px-9 sm:py-4 font-bold text-sm sm:text-base hover:bg-[#c27520] transition-colors"
           >
             無料デモを申し込む
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2.5 bg-white border border-[#3D2C1E]/10 text-[#2C3E40] px-7 py-3.5 sm:px-9 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:border-[#D98324]/25 transition-colors"
+            className="inline-flex items-center justify-center gap-2.5 bg-white border border-[#3D2C1E]/15 text-[#2C3E40] px-7 py-3.5 sm:px-9 sm:py-4 font-semibold text-sm sm:text-base hover:border-[#D98324]/40 transition-colors"
           >
             お問い合わせ
             <Mail className="w-4 h-4" />

@@ -18,10 +18,16 @@ import CtaSection from './components/sections/CtaSection';
 import ContactSection from './components/sections/ContactSection';
 import Footer from './components/sections/Footer';
 import MobileFloatingCta from './components/sections/MobileFloatingCta';
+import NotFound from './components/sections/NotFound';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const medicalProductUrl = 'https://medical.ilmiaco.com';
+
+  // Client-side 404: Firebase rewrites everything to index.html, so we detect
+  // unknown paths here. Only the root path renders the full site.
+  const isNotFound =
+    typeof window !== 'undefined' && window.location.pathname !== '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -30,6 +36,10 @@ export default function App() {
   }, []);
 
   useReveal();
+
+  if (isNotFound) {
+    return <NotFound />;
+  }
 
   return (
     <div className="min-h-screen bg-surface relative overflow-hidden" itemScope itemType="https://schema.org/WebPage">
