@@ -26,3 +26,6 @@ Thumbs.db
 
 # Claude
 .claude
+
+# Internal company data — do not commit
+kumano/
