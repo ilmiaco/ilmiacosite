@@ -1,4 +1,4 @@
-import { Stethoscope, FileText, Zap, ArrowRight } from 'lucide-react';
+import { MessageSquare, Stethoscope, Zap, ArrowRight } from 'lucide-react';
 
 export default function PlatformOverview() {
   return (
@@ -12,40 +12,40 @@ export default function PlatformOverview() {
           </div>
           <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
             ILMIAが、<br />
-            <span className="text-[#D98324]">すべて解決します。</span>
+            <span className="text-[#D98324]">医療現場を支えます。</span>
           </h2>
           <p className="text-base sm:text-lg text-[#2C3E40]/80 max-w-2xl leading-[2]">
-            診察から請求まで、AIが一気通貫で最適化。
+            患者説明AIから電子カルテまで、クリニックの業務全体をカバー。
             <br className="hidden sm:block" />
-            電子カルテAIとレセプトAIの統合プラットフォーム。
+            小さく始めて、必要に応じて広げられます。
           </p>
         </div>
 
         {/* Two product modules linked by arrow */}
         <div className="relative reveal reveal-delay-1">
           <div className="grid md:grid-cols-[1fr_auto_1fr] gap-6 md:gap-4 items-stretch">
-            {/* EMR AI module */}
+            {/* Guide AI module — primary */}
             <div className="bg-white border border-[#3D2C1E]/8 p-7 sm:p-9 relative group hover:border-[#D98324]/40 transition-colors">
               {/* Top accent line */}
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#D98324]" />
 
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-14 h-14 bg-[#D98324] flex items-center justify-center flex-shrink-0">
-                  <Stethoscope className="w-7 h-7 text-white" />
+                  <MessageSquare className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold tracking-[0.2em] text-[#D98324] mb-1">01 — VOICE AI</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#3D2C1E] leading-tight">電子カルテAI</h3>
+                  <div className="text-xs font-bold tracking-[0.2em] text-[#D98324] mb-1">01 — GUIDE AI</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#3D2C1E] leading-tight">イルミアガイド</h3>
                 </div>
               </div>
 
               <p className="text-sm sm:text-base text-[#6B7273] leading-[1.9] mb-6">
-                AIが診察に寄り添い、<br />
-                カルテを自動で仕上げる
+                患者説明AIで、スタッフの<br />
+                説明品質を底上げする
               </p>
 
               <div className="flex items-center gap-2 text-sm font-bold text-[#D98324] group-hover:gap-3 transition-all">
-                <span>診察を支援</span>
+                <span>月額 ¥9,800〜</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
             </div>
@@ -72,28 +72,28 @@ export default function PlatformOverview() {
               </div>
             </div>
 
-            {/* Receipt AI module */}
+            {/* EMR AI module — secondary */}
             <div className="bg-white border border-[#3D2C1E]/8 p-7 sm:p-9 relative group hover:border-[#3D2C1E]/40 transition-colors">
               {/* Top accent line */}
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#3D2C1E]" />
 
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-14 h-14 bg-[#3D2C1E] flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-7 h-7 text-white" />
+                  <Stethoscope className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold tracking-[0.2em] text-[#3D2C1E] mb-1">02 — CHECK AI</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#3D2C1E] leading-tight">レセプトAI</h3>
+                  <div className="text-xs font-bold tracking-[0.2em] text-[#3D2C1E] mb-1">02 — EMR AI</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#3D2C1E] leading-tight">イルミアカルテ</h3>
                 </div>
               </div>
 
               <p className="text-sm sm:text-base text-[#6B7273] leading-[1.9] mb-6">
-                請求前の見落としを減らし、<br />
-                売上を守る
+                問診からカルテ・レセプトまで、<br />
+                AIで一気通貫
               </p>
 
               <div className="flex items-center gap-2 text-sm font-bold text-[#3D2C1E] group-hover:gap-3 transition-all">
-                <span>収益を保護</span>
+                <span>月額 ¥79,000〜</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function PlatformOverview() {
           <div className="mt-10 text-center">
             <p className="inline-flex items-center gap-2 text-sm sm:text-base text-[#3D2C1E] font-bold tracking-wide">
               <span className="h-px w-8 bg-[#D98324]" />
-              診察から請求まで、AIがシームレスに連携
+              スモールスタートで、クリニックに合わせて広げられる
               <span className="h-px w-8 bg-[#D98324]" />
             </p>
           </div>
