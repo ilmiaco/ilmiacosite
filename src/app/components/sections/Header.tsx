@@ -56,6 +56,10 @@ export default function Header({ scrolled }: HeaderProps) {
             className="flex items-center gap-3.5"
             aria-label="ILMIA イルミアテック - ホームへ戻る"
             itemProp="url"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           >
             <img src={logoImage} alt="ILMIA イルミアテック" className="h-10 sm:h-12 w-auto brightness-0 invert" itemProp="name" />
             <div className="hidden sm:flex items-center gap-3 pl-3.5 border-l border-white/15">

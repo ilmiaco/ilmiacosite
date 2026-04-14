@@ -19,7 +19,7 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
       </div>
 
       <div className="relative z-10 w-full">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 pt-[88px] pb-6 sm:pt-28 sm:pb-10 md:pt-32 md:pb-14">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 pt-[100px] pb-6 sm:pt-28 sm:pb-10 md:pt-32 md:pb-14">
           <div className="max-w-3xl">
             {/* Editorial label */}
             <div className="flex items-center gap-3 mb-2.5 sm:mb-6">
