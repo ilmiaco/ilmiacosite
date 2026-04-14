@@ -12,7 +12,7 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img src={heroBgImage} alt="" className="w-full h-full object-cover fixed-bg" loading="eager" />
-        {/* Mobile: vertical gradient lets the image breathe through the upper portion */}
+        {/* Mobile: vertical gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/55 via-white/90 to-white md:hidden" />
         {/* Desktop: horizontal gradient */}
         <div className="absolute inset-0 hidden md:block md:bg-gradient-to-r md:from-white md:via-white/90 md:to-transparent" />
@@ -23,7 +23,7 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
           <div className="max-w-3xl">
             {/* Editorial label */}
             <div className="flex items-center gap-3 mb-2.5 sm:mb-6">
-              <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-[#D98324]">MEDICAL AI</span>
+              <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-[#D98324]">患者説明AI</span>
               <div className="h-px flex-1 max-w-[60px] bg-[#D98324]/40" />
               <span className="text-[11px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-[#3D2C1E]/60">SINCE 2025</span>
             </div>
@@ -31,10 +31,10 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
             {/* Tagline badge */}
             <div className="mb-3 sm:mb-7 inline-block bg-[#3D2C1E]/4 border-l-[3px] sm:border-l-2 border-[#D98324] pl-4 pr-3 py-1.5 sm:py-2.5">
               <p className="text-xs sm:text-base text-[#2C3E40]/80 leading-snug sm:leading-relaxed tracking-wide">
-                <span className="font-bold text-[#3D2C1E]">電子カルテAI × レセプトAI</span>
+                <span className="font-bold text-[#3D2C1E]">患者説明AI × スタッフの属人化解消</span>
                 <span className="hidden sm:inline text-[#6B7273] mx-2">／</span>
                 <span className="sm:hidden"> — </span>
-                診察から請求まで、<span className="font-bold text-[#D98324]">AIが漏れなく最適化</span>
+                説明品質を、<span className="font-bold text-[#D98324]">AIが底上げする</span>
               </p>
             </div>
 
@@ -44,16 +44,16 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
               className="text-[1.875rem] sm:text-4xl md:text-5xl lg:text-[4rem] font-bold mb-3 sm:mb-8 leading-[1.2] tracking-tight"
               itemProp="headline"
             >
-              <span className="text-[#3D2C1E]">AIが診察を支え、</span>
+              <span className="text-[#3D2C1E]">スタッフの説明を、</span>
               <br />
-              <span className="text-[#3D2C1E]">請求漏れを防ぐ。</span>
+              <span className="text-[#3D2C1E]">AIが支える。</span>
               <br />
-              <span className="text-[#D98324]">医療AIの新基準。</span>
+              <span className="text-[#D98324]">説明品質の新基準。</span>
             </h1>
 
             <p className="text-xs sm:text-lg md:text-xl text-[#6B7273] mb-4 sm:mb-10 leading-[1.7] sm:leading-[2] max-w-2xl">
-              音声認識AIがリアルタイムで診察を支援し、電子カルテを自動生成。<br className="hidden sm:block" />
-              レセプトAIが請求前の見落としや入力ミスをチェックし、<span className="text-[#3D2C1E] font-bold">売上の取りこぼしを防ぎます</span>。
+              院内マニュアルを読み込ませるだけで、AIがスタッフの患者説明をサポート。<br className="hidden sm:block" />
+              スキルのバラつきをなくし、<span className="text-[#3D2C1E] font-bold">クリニック全体の説明品質を一定水準に保ちます</span>。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-4 sm:mb-10">
@@ -74,7 +74,7 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
             </div>
 
             <ul className="flex flex-row flex-wrap gap-x-5 gap-y-2 sm:gap-x-8 text-[11px] sm:text-sm text-[#6B7273]">
-              {['音声入力でカルテ作成を短縮', '請求前の見落としを自動チェック', '最新ルールの更新に自動対応'].map((text) => (
+              {['最短3分セットアップで導入可能', '音声・チャット両対応でワークフローを止めない', '専門用語を患者向けの言葉に自動変換'].map((text) => (
                 <li key={text} className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#D98324] flex-shrink-0" />
                   {text}
