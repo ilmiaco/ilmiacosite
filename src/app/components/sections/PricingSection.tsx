@@ -2,30 +2,27 @@ import { Check, Star, ArrowRight } from 'lucide-react';
 
 const plans = [
   {
-    name: 'Clinic',
-    price: '79,000',
-    target: 'クリニック・診療所',
-    minutes: '6,000分（100時間）',
-    overage: '¥10/分',
-    features: ['電子カルテAI全機能', 'レセプトAI全機能', '医療向け音声認識', '最新ルールの自動更新', 'メール＆チャットサポート'],
+    name: 'ライト',
+    price: '9,800',
+    target: 'まず試したい医院様向け',
+    note: null,
+    features: ['手順登録3件まで', '音声モード対応', 'チャットモード対応', 'メールサポート'],
     recommended: false,
   },
   {
-    name: 'Hospital',
-    price: '299,000',
-    target: '中規模病院',
-    minutes: '24,000分（400時間）',
-    overage: '¥9/分',
-    features: ['Clinicプランの全機能', '既存システム連携', '優先サポート', '大規模運用向け設定'],
+    name: '標準',
+    price: '29,800',
+    target: '日常運用向け',
+    note: null,
+    features: ['複数手順・無制限登録', '音声・チャット両対応', '優先サポート', '院内導入支援'],
     recommended: true,
   },
   {
-    name: 'Enterprise',
-    price: '699,000',
-    target: '大規模病院・特殊施設',
-    minutes: '60,000分（1,000時間）',
-    overage: '¥8/分',
-    features: ['ホスピタルプランの全機能', '専任サポート', 'カスタム連携対応', 'オンサイト導入支援'],
+    name: '大規模',
+    price: null,
+    target: '複数部門・拠点での利用',
+    note: '要お問い合わせ',
+    features: ['複数部門・拠点対応', 'カスタム運用設計', '専任サポート', '伴走支援'],
     recommended: false,
   },
 ];
@@ -41,10 +38,10 @@ export default function PricingSection({ medicalProductUrl }: PricingSectionProp
         {/* Editorial heading */}
         <div className="mb-14 md:mb-20 reveal">
           <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
-            シンプルな<span className="text-[#D98324]">料金体系</span>
+            イルミアガイド<span className="text-[#D98324]">料金プラン</span>
           </h2>
           <p className="text-base sm:text-lg text-[#2C3E40]/80 leading-[2] max-w-2xl">
-            使った分だけ、見える化。月額基本料＋従量制の明瞭な料金体系。
+            大掛かりなシステム導入は不要。用途に合わせてスモールスタートが可能です。
           </p>
         </div>
 
@@ -86,26 +83,20 @@ export default function PricingSection({ medicalProductUrl }: PricingSectionProp
 
                 {/* Price */}
                 <div className={`pb-6 mb-6 border-b ${plan.recommended ? 'border-white/15' : 'border-[#3D2C1E]/10'}`}>
-                  <div className="flex items-baseline gap-0.5">
-                    <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>¥</span>
-                    <span className={`text-4xl sm:text-5xl font-black ${plan.recommended ? 'text-[#F0B254]' : 'text-[#3D2C1E]'}`}>
-                      {plan.price}
-                    </span>
-                    <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>/月</span>
-                  </div>
+                  {plan.price ? (
+                    <div className="flex items-baseline gap-0.5">
+                      <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>¥</span>
+                      <span className={`text-4xl sm:text-5xl font-black ${plan.recommended ? 'text-[#F0B254]' : 'text-[#3D2C1E]'}`}>
+                        {plan.price}
+                      </span>
+                      <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>/月</span>
+                    </div>
+                  ) : (
+                    <div className={`text-2xl font-black ${plan.recommended ? 'text-[#F0B254]' : 'text-[#3D2C1E]'}`}>
+                      {plan.note}
+                    </div>
+                  )}
                 </div>
-
-                {/* Usage info — formal table style */}
-                <dl className={`text-sm space-y-3 mb-7 pb-6 border-b ${plan.recommended ? 'border-white/15' : 'border-[#3D2C1E]/10'}`}>
-                  <div className="flex justify-between gap-2">
-                    <dt className={plan.recommended ? 'text-white/60' : 'text-[#6B7273]'}>音声認識</dt>
-                    <dd className={`font-bold text-right ${plan.recommended ? 'text-white' : 'text-[#3D2C1E]'}`}>{plan.minutes}</dd>
-                  </div>
-                  <div className="flex justify-between gap-2">
-                    <dt className={plan.recommended ? 'text-white/60' : 'text-[#6B7273]'}>超過料金</dt>
-                    <dd className={`font-bold text-right ${plan.recommended ? 'text-white' : 'text-[#3D2C1E]'}`}>{plan.overage}</dd>
-                  </div>
-                </dl>
 
                 {/* Features */}
                 <ul className="space-y-3">
@@ -123,8 +114,8 @@ export default function PricingSection({ medicalProductUrl }: PricingSectionProp
 
         <div className="text-center reveal reveal-delay-2">
           <p className="text-sm text-[#6B7273] mb-7 max-w-xl mx-auto leading-relaxed">
-            すべてのプランで電子カルテAI・レセプトAIの全機能をご利用いただけます。
-            プラン選択の基準は音声認識の利用時間のみ。音声は一切保存・記録されません。
+            すべてのプランで初期費用0円。まずはライトプランでお試しいただけます。
+            イルミアカルテ（¥79,000〜/月）との組み合わせで、診察から請求まで一気通貫で最適化できます。
           </p>
           <a
             href={medicalProductUrl}
