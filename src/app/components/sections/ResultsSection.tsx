@@ -3,24 +3,24 @@ import { TrendingDown, Zap, RefreshCw } from 'lucide-react';
 const results = [
   {
     icon: TrendingDown,
-    stat: '¥0',
-    statLabel: '取りこぼし',
-    title: '請求の取りこぼしを減らす',
-    description: 'AIが見落としやすい項目を自動で見つけ、請求漏れによる売上ロスを防ぎます。',
+    stat: '75%',
+    statLabel: '削減',
+    title: '事務作業を大幅に削減',
+    description: 'AIが問診・カルテ・レセプトを一気通貫で自動化。毎日の事務作業を75%削減し、診察に集中できる時間を取り戻します。',
   },
   {
     icon: Zap,
-    stat: '−2h',
-    statLabel: '/ 日あたり',
-    title: 'カルテ記載時間を大幅短縮',
-    description: '音声認識と電子カルテ自動生成で、診察後の記載作業を最小限に。医師の時間を診察に集中させます。',
+    stat: '3分',
+    statLabel: 'でカルテ完成',
+    title: 'カルテ作成時間を劇的に短縮',
+    description: '診察中の会話をAIがリアルタイムでSOAP形式に記録。診察後のカルテ作成がわずか3分で完了します。',
   },
   {
     icon: RefreshCw,
-    stat: '90%',
-    statLabel: '削減',
-    title: '差し戻しややり直しを減らす',
-    description: '提出前に違和感のある内容をチェックし、あとから修正に追われる時間を減らします。',
+    stat: '98%',
+    statLabel: 'の算定精度',
+    title: '請求漏れ・返戻リスクを最小化',
+    description: '提出前にAIが算定漏れや病名の不一致をチェック。算定チェック精度98%で、月末の不安を解消します。',
   },
 ];
 
@@ -31,7 +31,7 @@ export default function ResultsSection() {
         {/* Editorial heading */}
         <div className="mb-14 md:mb-20 reveal">
           <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
-            導入効果
+            イルミアカルテ<span className="text-[#D98324]"> 導入効果</span>
           </h2>
         </div>
 
