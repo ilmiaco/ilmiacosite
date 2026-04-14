@@ -14,14 +14,14 @@ export default function AnnouncementBanner({ medicalProductUrl, scrolled }: Anno
       aria-hidden={scrolled ? 'true' : undefined}
     >
       <a
-        href={medicalProductUrl}
+        href="https://guide.ilmiaco.com/"
         target="_blank"
         rel="noopener noreferrer"
         className="relative flex items-center justify-center gap-1.5 sm:gap-3 hover:opacity-80 transition-opacity group"
       >
-        <span className="hidden sm:inline text-[#D98324] text-xs font-semibold tracking-wide">電子カルテAI × レセプトAI</span>
+        <span className="hidden sm:inline text-[#D98324] text-xs font-semibold tracking-wide">患者説明AI イルミアガイド</span>
         <span className="text-xs sm:text-sm font-bold tracking-wide text-[#3D2C1E]">
-          <span className="sm:hidden">電子カルテAI × レセプトAI — </span>クリニック経営を、AIが変える時代へ
+          <span className="sm:hidden">患者説明AI — </span>スタッフの説明を、AIが支える
         </span>
         <ArrowRight className="w-3.5 h-3.5 text-[#D98324]/70 group-hover:translate-x-0.5 transition-transform" />
       </a>
