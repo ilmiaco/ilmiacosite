@@ -43,7 +43,7 @@ export default function OtherProductsSection() {
             <span className="text-xs font-bold tracking-[0.3em] text-[#D98324]">OTHER PRODUCTS</span>
             <div className="h-px flex-1 max-w-[80px] bg-[#D98324]/30" />
           </div>
-          <h2 className="text-[1.875rem] sm:text-4xl md:text-4xl font-bold text-[#3D2C1E] leading-tight">
+          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
             さらに深く使いたい方へ
           </h2>
           <p className="text-base sm:text-lg text-[#2C3E40]/80 max-w-2xl leading-[2] mt-5">
