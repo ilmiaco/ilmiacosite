@@ -6,14 +6,13 @@ import HeroSection from './components/sections/HeroSection';
 import AboutSection from './components/sections/AboutSection';
 import PainPointsSection from './components/sections/PainPointsSection';
 import PlatformOverview from './components/sections/PlatformOverview';
-import EmrSection from './components/sections/EmrSection';
-import ReceiptSection from './components/sections/ReceiptSection';
+import GuideSection from './components/sections/GuideSection';
+import OtherProductsSection from './components/sections/OtherProductsSection';
 import QuoteBanner from './components/sections/QuoteBanner';
 import ResultsSection from './components/sections/ResultsSection';
 import PricingSection from './components/sections/PricingSection';
 import FaqSection from './components/sections/FaqSection';
 import ScenariosSection from './components/sections/ScenariosSection';
-import OtherProductsSection from './components/sections/OtherProductsSection';
 import CtaSection from './components/sections/CtaSection';
 import ContactSection from './components/sections/ContactSection';
 import Footer from './components/sections/Footer';
@@ -24,8 +23,6 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const medicalProductUrl = 'https://medical.ilmiaco.com';
 
-  // Client-side 404: Firebase rewrites everything to index.html, so we detect
-  // unknown paths here. Only the root path renders the full site.
   const isNotFound =
     typeof window !== 'undefined' && window.location.pathname !== '/';
 
@@ -51,14 +48,13 @@ export default function App() {
         <AboutSection />
         <PainPointsSection />
         <PlatformOverview />
-        <EmrSection />
-        <ReceiptSection />
+        <GuideSection />
+        <OtherProductsSection />
         <QuoteBanner />
         <ResultsSection />
         <PricingSection medicalProductUrl={medicalProductUrl} />
         <FaqSection />
         <ScenariosSection />
-        <OtherProductsSection />
         <CtaSection medicalProductUrl={medicalProductUrl} />
         <ContactSection />
       </main>
