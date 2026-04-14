@@ -9,10 +9,6 @@ export default function EmrSection() {
     <section id="emr-ai" className="py-20 md:py-28 px-5 sm:px-6 bg-white" aria-labelledby="emr-heading">
       <div className="max-w-5xl mx-auto">
         <div className="mb-14 md:mb-20 reveal">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="text-xs font-bold tracking-[0.3em] text-[#D98324]">電子カルテAI</span>
-            <div className="h-px flex-1 max-w-[80px] bg-[#D98324]/30" />
-          </div>
           <h2 id="emr-heading" className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#D98324] leading-tight">
             「声で診る。AIが書く。」
           </h2>

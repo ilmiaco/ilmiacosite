@@ -30,10 +30,6 @@ export default function ResultsSection() {
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
         <div className="mb-14 md:mb-20 reveal">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="text-xs font-bold tracking-[0.3em] text-[#D98324]">RESULTS</span>
-            <div className="h-px flex-1 max-w-[80px] bg-[#D98324]/30" />
-          </div>
           <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
             導入効果
           </h2>
