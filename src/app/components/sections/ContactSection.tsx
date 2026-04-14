@@ -27,6 +27,7 @@ export default function ContactSection() {
                 name="inquiryType"
                 className="w-full px-4 py-3.5 text-base border-b-2 border-[#3D2C1E]/15 focus:border-[#D98324] outline-none bg-transparent transition-colors"
               >
+                <option value="イルミアガイドについて">イルミアガイドについて</option>
                 <option value="電子カルテAIについて">電子カルテAIについて</option>
                 <option value="レセプトAIについて">レセプトAIについて</option>
                 <option value="料金プランについて">料金プランについて</option>
