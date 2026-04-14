@@ -7,7 +7,7 @@ interface HeroSectionProps {
 export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
   return (
     <section
-      className="relative min-h-[100svh] md:h-screen flex items-center overflow-hidden"
+      className="relative min-h-[100svh] md:h-screen flex items-center overflow-hidden pt-[92px] sm:pt-[116px]"
       aria-labelledby="hero-heading"
     >
       <div className="absolute inset-0" aria-hidden="true">
@@ -19,7 +19,7 @@ export default function HeroSection({ medicalProductUrl }: HeroSectionProps) {
       </div>
 
       <div className="relative z-10 w-full">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 pt-[100px] pb-6 sm:pt-28 sm:pb-10 md:pt-32 md:pb-14">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 py-6 sm:py-10 md:py-14">
           <div className="max-w-3xl">
             {/* Editorial label */}
             <div className="flex items-center gap-3 mb-2.5 sm:mb-6">
