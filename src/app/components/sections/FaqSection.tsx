@@ -23,7 +23,7 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <section className="py-20 md:py-28 px-5 sm:px-6 bg-white" aria-labelledby="faq-heading">
+    <section id="faq" className="py-20 md:py-28 px-5 sm:px-6 bg-white" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto">
         {/* Editorial heading */}
         <div className="mb-14 md:mb-20 reveal">

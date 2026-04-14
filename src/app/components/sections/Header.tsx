@@ -3,10 +3,9 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import logoImage from '@/assets/brand.svg';
 
 const navItems = [
-  { label: '電子カルテAI', href: '#emr-ai', highlight: true },
-  { label: 'レセプトAI', href: '#receipt-ai', highlight: true },
+  { label: '機能', href: '#guide-ai' },
   { label: '料金', href: '#pricing' },
-  { label: '導入シナリオ', href: '#scenarios' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'ABOUT', href: '#about' },
 ];
 
@@ -89,10 +88,12 @@ export default function Header({ scrolled }: HeaderProps) {
 
             {/* CTA — rectangular editorial */}
             <a
-              href="#contact"
+              href="https://guide.ilmiaco.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2.5 text-[13px] font-bold tracking-wider px-5 py-2.5 bg-[#D98324] text-white border border-[#D98324] hover:bg-transparent hover:border-[#F0B254] hover:text-[#F0B254] transition-all"
             >
-              お問い合わせ
+              無料デモを試す
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </nav>
@@ -100,10 +101,12 @@ export default function Header({ scrolled }: HeaderProps) {
           {/* Mobile actions: compact CTA + hamburger */}
           <div className="lg:hidden flex items-center gap-1.5">
             <a
-              href="#contact"
+              href="https://guide.ilmiaco.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[11px] font-bold tracking-wider px-3.5 py-2 bg-[#D98324] text-white hover:bg-[#c27520] transition-colors"
             >
-              お問い合わせ
+              無料デモ
             </a>
             <button
               className="p-2.5 text-white hover:bg-white/10 transition-colors"
@@ -141,11 +144,13 @@ export default function Header({ scrolled }: HeaderProps) {
               ))}
             </div>
             <a
-              href="#contact"
+              href="https://guide.ilmiaco.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group mt-6 flex items-center justify-center gap-2.5 bg-[#D98324] text-white font-bold text-sm tracking-wider py-4 hover:bg-[#c27520] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              お問い合わせ
+              無料デモを試す
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </nav>
