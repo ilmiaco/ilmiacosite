@@ -18,7 +18,7 @@ export default function AboutSection() {
             私たちについて
           </h2>
           <p className="text-sm sm:text-base text-[#2C3E40]/80 max-w-2xl leading-[2]" itemProp="description">
-            ILMIAは、診察のしやすさと請求の正確さを両立させるための医療AIをつくっています。
+            ILMIAは、患者説明から電子カルテ・レセプトまでをカバーする医療AIをつくっています。
             <br className="hidden sm:block" />
             医師とAIエンジニアが一緒に開発し、現場で本当に使いやすい形にこだわっています。
           </p>
