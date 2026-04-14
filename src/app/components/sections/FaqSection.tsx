@@ -23,11 +23,11 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <section className="py-20 md:py-28 px-5 sm:px-6 bg-white">
+    <section className="py-20 md:py-28 px-5 sm:px-6 bg-white" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto">
         {/* Editorial heading */}
         <div className="mb-14 md:mb-20 reveal">
-          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
+          <h2 id="faq-heading" className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
             よくある<span className="text-[#D98324]">ご質問</span>
           </h2>
         </div>

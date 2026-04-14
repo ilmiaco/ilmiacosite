@@ -41,18 +41,18 @@ export default function ScenariosSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 border border-[#3D2C1E]/15 reveal reveal-delay-1" role="list" aria-label="医療AI導入シナリオ一覧">
+        <div className="grid sm:grid-cols-3 border border-[#3D2C1E]/15 reveal reveal-delay-1" role="list" aria-label="医療AI導入シナリオ一覧">
           {scenarios.map((scenario, i) => (
             <article
               key={scenario.id}
               id={scenario.id}
               className={`relative bg-white p-6 sm:p-9 group hover:bg-[#FAF6F0]/50 transition-colors ${
-                i > 0 ? 'border-t border-[#3D2C1E]/15' : ''
-              } ${i % 2 === 1 ? 'sm:border-l sm:border-[#3D2C1E]/15' : ''} ${i >= 2 ? 'sm:border-t sm:border-[#3D2C1E]/15' : ''} ${i === 1 ? 'sm:border-t-0' : ''}`}
+                i > 0 ? 'border-t sm:border-t-0 sm:border-l border-[#3D2C1E]/15' : ''
+              }`}
               role="listitem"
             >
               {/* Top accent bar — full top row on desktop, only first card on mobile */}
-              <div className={`absolute top-0 left-0 right-0 h-[2px] bg-[#D98324] ${i === 0 ? '' : i === 1 ? 'hidden sm:block' : 'hidden'}`} />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#D98324]" />
 
               {/* Number + icon row */}
               <div className="flex items-center gap-3 mb-5">
