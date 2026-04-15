@@ -2,15 +2,15 @@ import { MessageSquare, Stethoscope, Zap, ArrowRight } from 'lucide-react';
 
 export default function PlatformOverview() {
   return (
-    <section id="platform" className="py-20 md:py-28 px-5 sm:px-6 bg-[#FAF6F0]">
+    <section id="platform" className="py-20 md:py-12 px-5 sm:px-6 bg-[#FAF6F0]">
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-14 md:mb-20 reveal">
+        <div className="mb-14 md:mb-10 reveal">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xs font-bold tracking-[0.3em] text-[#D98324]">PLATFORM</span>
             <div className="h-px flex-1 max-w-[80px] bg-[#D98324]/30" />
           </div>
-          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
+          <h2 className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
             ILMIAが、<br />
             <span className="text-[#D98324]">医療現場を支えます。</span>
           </h2>

@@ -2,11 +2,11 @@ import { ShieldCheck, Clock } from 'lucide-react';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 md:py-28 px-5 sm:px-6 bg-white" aria-labelledby="contact-heading">
+    <section id="contact" className="py-20 md:py-12 px-5 sm:px-6 bg-white" aria-labelledby="contact-heading">
       <div className="max-w-3xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-12 md:mb-16 reveal">
-          <h2 id="contact-heading" className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
+        <div className="mb-12 md:mb-8 reveal">
+          <h2 id="contact-heading" className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
             お問い合わせ
           </h2>
           <p className="text-base sm:text-lg text-[#6B7273] leading-[2] max-w-2xl">

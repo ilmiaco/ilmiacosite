@@ -29,11 +29,11 @@ const scenarios = [
 
 export default function ScenariosSection() {
   return (
-    <section id="scenarios" className="py-20 md:py-28 px-5 sm:px-6 bg-[#FAF6F0]" aria-labelledby="scenarios-heading">
+    <section id="scenarios" className="py-20 md:py-12 px-5 sm:px-6 bg-[#FAF6F0]" aria-labelledby="scenarios-heading">
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-14 md:mb-20 reveal">
-          <h2 id="scenarios-heading" className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
+        <div className="mb-14 md:mb-10 reveal">
+          <h2 id="scenarios-heading" className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
             医療AIの<span className="text-[#D98324]">導入シナリオ</span>
           </h2>
           <p className="text-base sm:text-lg text-[#2C3E40]/80 leading-[2] max-w-2xl">

@@ -31,16 +31,13 @@ export default function NotFound() {
               aria-label="ILMIA イルミアテック - ホームへ戻る"
             >
               <img src={logoImage} alt="ILMIA イルミアテック" className="h-10 sm:h-12 w-auto brightness-0 invert" />
-              <div className="hidden sm:flex items-center gap-3 pl-3.5 border-l border-white/15">
-                <span className="text-[10px] font-bold tracking-[0.25em] text-[#F0B254]">医療AI</span>
-              </div>
             </a>
           </div>
         </div>
       </header>
 
       {/* Main */}
-      <main className="flex-1 flex items-center px-5 sm:px-6 py-20 md:py-28">
+      <main className="flex-1 flex items-center px-5 sm:px-6 py-20 md:py-12">
         <div className="max-w-3xl mx-auto w-full">
           {/* Editorial label */}
           <div className="flex items-center gap-3 mb-7 sm:mb-8">

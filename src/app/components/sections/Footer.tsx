@@ -7,13 +7,12 @@ interface FooterProps {
 
 const footerColumns = (medicalProductUrl: string) => [
   {
-    title: 'サービス',
+    title: '製品',
     links: [
-      { text: '電子カルテAI', href: medicalProductUrl, external: true },
-      { text: 'レセプトAI', href: medicalProductUrl, external: true },
-      { text: 'イルミアコール', href: 'https://recruit.ilmiaco.com/', external: true },
-      { text: 'DX-Hub Ilmia', href: '#other-products' },
-      { text: 'PIBU AI', href: '#other-products' },
+      { text: 'イルミアガイド', href: 'https://guide.ilmiaco.com/', external: true },
+      { text: 'イルミアカルテ', href: medicalProductUrl, external: true },
+      { text: 'イルミアレセプト', href: medicalProductUrl, external: true },
+      { text: 'イルミアブック', href: 'https://book.ilmiaco.com/', external: true },
     ],
   },
   {
@@ -29,10 +28,10 @@ const footerColumns = (medicalProductUrl: string) => [
 
 export default function Footer({ medicalProductUrl }: FooterProps) {
   return (
-    <footer className="bg-[#3D2C1E] text-white pt-16 md:pt-20 pb-8 px-5 sm:px-6" role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
+    <footer className="bg-[#3D2C1E] text-white pt-16 md:pt-12 pb-8 px-5 sm:px-6" role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-12 md:mb-8">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-xs font-bold tracking-[0.3em] text-[#F0B254]">ILMIA TECH</span>
             <div className="h-px flex-1 max-w-[80px] bg-[#F0B254]/40" />
@@ -48,7 +47,7 @@ export default function Footer({ medicalProductUrl }: FooterProps) {
         </div>
 
         {/* Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 pt-12 border-t border-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-8 pt-12 md:pt-8 border-t border-white/10">
           {footerColumns(medicalProductUrl).map((col, i) => (
             <div key={i}>
               <h3 className="font-bold mb-5 text-xs uppercase tracking-[0.25em] text-[#F0B254]">{col.title}</h3>
@@ -69,7 +68,7 @@ export default function Footer({ medicalProductUrl }: FooterProps) {
             </div>
           ))}
 
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="font-bold mb-5 text-xs uppercase tracking-[0.25em] text-[#F0B254]">Contact</h3>
             <ul className="space-y-3.5 text-sm text-white/65">
               <li className="flex items-start gap-2.5">

@@ -2,35 +2,38 @@ import { Users } from 'lucide-react';
 import cooImage from '@/assets/ilmia-doc.jpg';
 
 const companyInfo = [
-  { label: '法人名', value: '株式会社イルミアテック' },
-  { label: '設立', value: '2025年9月' },
-  { label: '代表取締役', value: 'フッサム ワファ' },
+  { label: '法人名', value: '株式会社イルミアテック（Ilmia Co., Ltd.）' },
+  { label: '設立', value: '2025年9月17日' },
+  { label: '代表取締役', value: 'フッサム・ワファ（Hussam Wafa）' },
+  { label: '資本金', value: '30万円' },
+  { label: '事業内容', value: '医療DXを中心としたSaaS製品の開発・販売' },
   { label: '所在地', value: '大阪市北区梅田1-2-2-12-12' },
+  { label: 'お問い合わせ', value: 'info@ilmiaco.com' },
 ];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-28 px-5 sm:px-6 bg-[#FAF6F0]" aria-labelledby="about-heading" itemScope itemType="https://schema.org/AboutPage">
+    <section id="about" className="py-20 md:py-12 px-5 sm:px-6 bg-[#FAF6F0]" aria-labelledby="about-heading" itemScope itemType="https://schema.org/AboutPage">
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-14 md:mb-20 reveal">
-          <h2 id="about-heading" className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
+        <div className="mb-14 md:mb-10 reveal">
+          <h2 id="about-heading" className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
             私たちについて
           </h2>
           <p className="text-sm sm:text-base text-[#2C3E40]/80 max-w-2xl leading-[2]" itemProp="description">
             ILMIAは、患者説明から電子カルテ・レセプトまでをカバーする医療AIをつくっています。
             <br className="hidden sm:block" />
-            医師とAIエンジニアが一緒に開発し、現場で本当に使いやすい形にこだわっています。
+            現役の脳神経外科医とAIエンジニアが一緒に開発し、現場で本当に使いやすい形にこだわっています。
           </p>
         </div>
 
         {/* Founder — editorial layout, flat */}
         <article
-          className="mb-16 md:mb-20 reveal"
+          className="mb-16 md:mb-10 reveal"
           itemScope
           itemType="https://schema.org/Person"
         >
-          <div className="grid md:grid-cols-5 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-5 gap-8 md:gap-8">
             {/* Large photo, 2/5 width */}
             <div className="md:col-span-2">
               <div className="relative aspect-[4/3] md:aspect-[3/4] max-w-[400px] md:max-w-none mx-auto overflow-hidden bg-[#3D2C1E]/5">

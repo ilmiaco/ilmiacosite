@@ -33,11 +33,11 @@ export default function PainPointsSection() {
   const MOBILE_PREVIEW = 3;
 
   return (
-    <section className="py-20 md:py-28 px-5 sm:px-6 bg-white">
+    <section className="py-20 md:py-12 px-5 sm:px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-14 md:mb-20 reveal">
-          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
+        <div className="mb-14 md:mb-10 reveal">
+          <h2 className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold text-[#3D2C1E] leading-tight">
             院長先生、<br className="sm:hidden" />
             <span className="text-[#D98324]">こんなお悩み</span>はありませんか？
           </h2>

@@ -3,10 +3,10 @@ import FeatureCard from './FeatureCard';
 
 export default function GuideSection() {
   return (
-    <section id="guide-ai" className="py-20 md:py-28 px-5 sm:px-6 bg-white" aria-labelledby="guide-heading">
+    <section id="guide-ai" className="py-20 md:py-12 px-5 sm:px-6 bg-white" aria-labelledby="guide-heading">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-14 md:mb-20 reveal">
-          <h2 id="guide-heading" className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#D98324] leading-tight">
+        <div className="mb-14 md:mb-8 reveal">
+          <h2 id="guide-heading" className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold mb-6 text-[#D98324] leading-tight">
             「説明が伝わる。現場が止まらない。」
           </h2>
           <p className="text-base sm:text-lg text-[#2C3E40]/80 max-w-2xl leading-[2]">
@@ -63,22 +63,18 @@ export default function GuideSection() {
             <div className="w-full max-w-[300px] sm:max-w-xs mx-auto">
               <div className="bg-[#FAF6F0] border border-[#3D2C1E]/15 p-7">
                 <Mic className="w-12 h-12 text-[#D98324] mb-5" />
-                <div className="space-y-4">
-                  {[
-                    { label: '音声モード', detail: 'マイクで話しかけるだけ' },
-                    { label: 'チャットモード', detail: 'テキストで素早く確認' },
-                    { label: 'リアルタイム回答', detail: '待たせない速さで返答' },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-[#D98324]/8 flex items-center justify-center flex-shrink-0">
-                        <Mic className="w-4 h-4 text-[#D98324]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-[#3D2C1E] text-sm font-medium">{item.label}</div>
-                        <div className="text-[#6B7273] text-xs">{item.detail}</div>
-                      </div>
+                <div className="space-y-3.5">
+                  {['音声モードに対応', 'チャットモードに対応', 'リアルタイム応答'].map((text, i) => (
+                    <div key={i} className="flex items-center gap-3 text-sm text-[#2C3E40]/80">
+                      <div className="w-2.5 h-2.5 bg-[#D98324] rounded-full" />
+                      <span>{text}</span>
                     </div>
                   ))}
+                </div>
+                <div className="mt-6 pt-5 border-t border-[#3D2C1E]/8">
+                  <div className="text-xs text-[#6B7273]">対応モード</div>
+                  <div className="text-lg font-black text-[#3D2C1E] mt-0.5">音声 + チャット</div>
+                  <div className="text-xs text-[#6B7273] mt-0.5">切り替え不要</div>
                 </div>
               </div>
             </div>
@@ -99,17 +95,18 @@ export default function GuideSection() {
             <div className="w-full max-w-[300px] sm:max-w-xs mx-auto">
               <div className="bg-[#FAF6F0] border border-[#3D2C1E]/15 p-7">
                 <Languages className="w-12 h-12 text-[#D98324] mb-5" />
-                <div className="space-y-3">
-                  {[
-                    { from: '心房細動', to: '心臓のリズムが乱れる状態' },
-                    { from: '虚血性心疾患', to: '心臓への血液が不足する病気' },
-                    { from: '浮腫', to: 'むくみ（水分がたまった状態）' },
-                  ].map((item, i) => (
-                    <div key={i} className="bg-white p-3 border border-[#3D2C1E]/15">
-                      <div className="text-xs text-[#6B7273]">{item.from}</div>
-                      <div className="text-xs font-bold text-[#D98324] mt-0.5">→ {item.to}</div>
+                <div className="space-y-3.5">
+                  {['専門用語を自動変換', '患者目線で再構成', '不安を和らげる表現'].map((text, i) => (
+                    <div key={i} className="flex items-center gap-3 text-sm text-[#2C3E40]/80">
+                      <div className="w-2.5 h-2.5 bg-[#D98324] rounded-full" />
+                      <span>{text}</span>
                     </div>
                   ))}
+                </div>
+                <div className="mt-6 pt-5 border-t border-[#3D2C1E]/8">
+                  <div className="text-xs text-[#6B7273]">変換対象</div>
+                  <div className="text-lg font-black text-[#3D2C1E] mt-0.5">医療用語全般</div>
+                  <div className="text-xs text-[#6B7273] mt-0.5">質問対応時間を短縮</div>
                 </div>
               </div>
             </div>
@@ -131,20 +128,18 @@ export default function GuideSection() {
             <div className="w-full max-w-[300px] sm:max-w-xs mx-auto">
               <div className="bg-[#FAF6F0] border border-[#3D2C1E]/15 p-7">
                 <Users className="w-12 h-12 text-[#D98324] mb-5" />
-                <div className="space-y-3">
-                  {[
-                    { label: 'ベテランスタッフ', quality: '高品質' },
-                    { label: '新人スタッフ', quality: '高品質' },
-                    { label: 'アルバイト', quality: '高品質' },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center justify-between bg-white p-3 border border-[#3D2C1E]/15">
-                      <span className="text-xs text-[#2C3E40]/80">{item.label}</span>
-                      <span className="text-xs font-bold text-[#D98324]">{item.quality}</span>
+                <div className="space-y-3.5">
+                  {['言い回しの差を解消', '院内方針に沿う', '全員が同じ水準'].map((text, i) => (
+                    <div key={i} className="flex items-center gap-3 text-sm text-[#2C3E40]/80">
+                      <div className="w-2.5 h-2.5 bg-[#D98324] rounded-full" />
+                      <span>{text}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 pt-4 border-t border-[#3D2C1E]/8 text-center">
-                  <div className="text-xs text-[#6B7273]">AIが品質を均一化</div>
+                <div className="mt-6 pt-5 border-t border-[#3D2C1E]/8">
+                  <div className="text-xs text-[#6B7273]">説明品質</div>
+                  <div className="text-lg font-black text-[#3D2C1E] mt-0.5">全員均一</div>
+                  <div className="text-xs text-[#6B7273] mt-0.5">新人もベテラン水準</div>
                 </div>
               </div>
             </div>

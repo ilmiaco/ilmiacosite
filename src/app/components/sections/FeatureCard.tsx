@@ -64,7 +64,7 @@ export default function FeatureCard({
   );
 
   return (
-    <div className="mb-12 lg:mb-24 pb-12 lg:pb-0 border-b border-[#3D2C1E]/10 lg:border-b-0 last:border-b-0 last:pb-0 last:mb-0 lg:last:mb-24">
+    <div className="mb-12 lg:mb-12 pb-12 lg:pb-0 border-b border-[#3D2C1E]/10 lg:border-b-0 last:border-b-0 last:pb-0 last:mb-0 lg:last:mb-12">
       <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
         <div className={reversed ? 'order-2 lg:order-1' : ''}>
           {reversed ? illustrationSide : contentSide}

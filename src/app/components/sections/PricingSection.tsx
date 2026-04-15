@@ -1,51 +1,116 @@
+import { useState } from 'react';
 import { Check, Star, ArrowRight } from 'lucide-react';
+
+type Billing = 'monthly' | 'yearly';
 
 const plans = [
   {
     name: 'ライト',
-    price: '9,800',
-    target: 'まず試したい医院様向け',
-    note: null,
-    features: ['手順登録3件まで', '音声モード対応', 'チャットモード対応', 'メールサポート'],
+    monthly: '15,000',
+    yearly: '12,750',
+    yearlyTotal: '153,000',
+    target: 'クリニックおすすめ',
+    description: 'まずは試してみたい方に。7日間の無料トライアル付き。',
+    features: [
+      'スライド生成 月50枚',
+      'ライブラリ上限 10件',
+      'AI画像生成 月10枚',
+      'AI音声 月15,000文字',
+      '一括AI画像化',
+      '高品質音声（標準）',
+    ],
     recommended: false,
   },
   {
-    name: '標準',
-    price: '29,800',
-    target: '日常運用向け',
-    note: null,
-    features: ['複数手順・無制限登録', '音声・チャット両対応', '優先サポート', '院内導入支援'],
+    name: 'スタンダード',
+    monthly: '30,000',
+    yearly: '25,500',
+    yearlyTotal: '306,000',
+    target: '中小規模病院おすすめ',
+    description: '入院説明・マニュアル用に最適な中心プラン。',
+    features: [
+      'スライド生成 月150枚',
+      'ライブラリ上限 30件',
+      'AI画像生成 月30枚',
+      'AI音声 月75,000文字',
+      '一括AI画像化',
+      '高品質音声（標準 + 高品質）',
+      '動画エクスポート',
+    ],
     recommended: true,
   },
   {
-    name: '大規模',
-    price: null,
-    target: '複数部門・拠点での利用',
-    note: '要お問い合わせ',
-    features: ['複数部門・拠点対応', 'カスタム運用設計', '専任サポート', '伴走支援'],
+    name: 'プロ',
+    monthly: '60,000',
+    yearly: '51,000',
+    yearlyTotal: '612,000',
+    target: '大規模病院おすすめ',
+    description: '講演会・研修用に。複数部門の大量運用向け。',
+    features: [
+      'スライド生成 月500枚',
+      'ライブラリ上限 100件',
+      'AI画像生成 月100枚',
+      'AI音声 月400,000文字',
+      '一括AI画像化',
+      '高品質音声（標準 + 高品質）',
+      '動画エクスポート',
+    ],
     recommended: false,
   },
 ];
 
-interface PricingSectionProps {
-  medicalProductUrl: string;
-}
+export default function PricingSection() {
+  const [billing, setBilling] = useState<Billing>('monthly');
 
-export default function PricingSection({ medicalProductUrl }: PricingSectionProps) {
   return (
-    <section id="pricing" className="py-20 md:py-28 px-5 sm:px-6 bg-[#FAF6F0]">
+    <section id="pricing" className="py-20 md:py-12 px-5 sm:px-6 bg-[#FAF6F0]">
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-14 md:mb-20 reveal">
-          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
+        <div className="mb-10 md:mb-8 reveal">
+          <h2 className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold mb-6 text-[#3D2C1E] leading-tight">
             イルミアガイド<span className="text-[#D98324]">料金プラン</span>
           </h2>
           <p className="text-base sm:text-lg text-[#2C3E40]/80 leading-[2] max-w-2xl">
-            大掛かりなシステム導入は不要。用途に合わせてスモールスタートが可能です。
+            シンプルな料金体系で、すぐに始められます。ライトプランは7日間無料でお試しいただけます。
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-4 sm:gap-0 max-w-5xl mx-auto mb-12 reveal reveal-delay-1 sm:items-stretch">
+        {/* Billing period toggle */}
+        <div className="flex justify-center mb-10 reveal reveal-delay-1">
+          <div className="inline-flex items-center bg-white border border-[#3D2C1E]/15 p-1">
+            <button
+              type="button"
+              onClick={() => setBilling('monthly')}
+              className={`px-5 sm:px-7 py-2 text-sm font-bold tracking-wider transition-colors ${
+                billing === 'monthly'
+                  ? 'bg-[#3D2C1E] text-white'
+                  : 'text-[#6B7273] hover:text-[#3D2C1E]'
+              }`}
+              aria-pressed={billing === 'monthly'}
+            >
+              月額
+            </button>
+            <button
+              type="button"
+              onClick={() => setBilling('yearly')}
+              className={`px-5 sm:px-7 py-2 text-sm font-bold tracking-wider transition-colors inline-flex items-center gap-2 ${
+                billing === 'yearly'
+                  ? 'bg-[#3D2C1E] text-white'
+                  : 'text-[#6B7273] hover:text-[#3D2C1E]'
+              }`}
+              aria-pressed={billing === 'yearly'}
+            >
+              年額
+              <span className={`text-[10px] tracking-wide px-1.5 py-0.5 font-bold ${
+                billing === 'yearly' ? 'bg-[#F0B254] text-[#3D2C1E]' : 'bg-[#D98324]/15 text-[#D98324]'
+              }`}>
+                15% OFF
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-4 sm:gap-0 max-w-5xl mx-auto mb-12 reveal reveal-delay-2 sm:items-stretch">
           {plans.map((plan, i) => (
             <div
               key={i}
@@ -77,24 +142,26 @@ export default function PricingSection({ medicalProductUrl }: PricingSectionProp
                 <h3 className={`text-2xl font-bold mb-1 ${plan.recommended ? 'text-white' : 'text-[#3D2C1E]'}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm mb-7 ${plan.recommended ? 'text-white/65' : 'text-[#6B7273]'}`}>
+                <p className={`text-sm mb-3 ${plan.recommended ? 'text-white/65' : 'text-[#6B7273]'}`}>
                   {plan.target}
+                </p>
+                <p className={`text-xs mb-7 leading-relaxed ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]/80'}`}>
+                  {plan.description}
                 </p>
 
                 {/* Price */}
                 <div className={`pb-6 mb-6 border-b ${plan.recommended ? 'border-white/15' : 'border-[#3D2C1E]/10'}`}>
-                  {plan.price ? (
-                    <div className="flex items-baseline gap-0.5">
-                      <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>¥</span>
-                      <span className={`text-4xl sm:text-5xl font-black ${plan.recommended ? 'text-[#F0B254]' : 'text-[#3D2C1E]'}`}>
-                        {plan.price}
-                      </span>
-                      <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>/月</span>
-                    </div>
-                  ) : (
-                    <div className={`text-2xl font-black ${plan.recommended ? 'text-[#F0B254]' : 'text-[#3D2C1E]'}`}>
-                      {plan.note}
-                    </div>
+                  <div className="flex items-baseline gap-0.5">
+                    <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>¥</span>
+                    <span className={`text-4xl sm:text-5xl font-black ${plan.recommended ? 'text-[#F0B254]' : 'text-[#3D2C1E]'}`}>
+                      {billing === 'monthly' ? plan.monthly : plan.yearly}
+                    </span>
+                    <span className={`text-sm ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>/月（税抜）</span>
+                  </div>
+                  {billing === 'yearly' && (
+                    <p className={`text-xs mt-2 ${plan.recommended ? 'text-white/55' : 'text-[#6B7273]'}`}>
+                      年額 ¥{plan.yearlyTotal} 一括払い
+                    </p>
                   )}
                 </div>
 
@@ -114,11 +181,10 @@ export default function PricingSection({ medicalProductUrl }: PricingSectionProp
 
         <div className="text-center reveal reveal-delay-2">
           <p className="text-sm text-[#6B7273] mb-7 max-w-xl mx-auto leading-relaxed">
-            すべてのプランで初期費用0円。まずはライトプランでお試しいただけます。
-            イルミアカルテ（¥79,000〜/月）との組み合わせで、診察から請求まで一気通貫で最適化できます。
+            年間契約で15%OFF（2か月分お得）。表示価格はすべて税抜です。別途送客費が加算されます。
           </p>
           <a
-            href={medicalProductUrl}
+            href="https://guide.ilmiaco.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center justify-center gap-2.5 bg-[#D98324] text-white px-9 py-4 sm:px-11 sm:py-5 font-bold text-base sm:text-lg hover:bg-[#c27520] transition-colors"

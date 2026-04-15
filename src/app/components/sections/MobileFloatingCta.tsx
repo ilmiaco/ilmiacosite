@@ -11,14 +11,15 @@ export default function MobileFloatingCta() {
       const threshold = window.innerHeight * 0.6;
       const contactSection = document.getElementById('contact');
 
-      // Hide when contact section is in view
-      let isContactVisible = false;
+      // Only show when contact section is still below the viewport.
+      // Hides both when contact is visible and when the user has scrolled past it (footer area).
+      let isContactBelowViewport = true;
       if (contactSection) {
         const rect = contactSection.getBoundingClientRect();
-        isContactVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        isContactBelowViewport = rect.top >= window.innerHeight;
       }
 
-      setIsVisible(scrollY > threshold && !isContactVisible);
+      setIsVisible(scrollY > threshold && isContactBelowViewport);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });

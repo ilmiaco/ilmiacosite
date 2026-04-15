@@ -1,4 +1,4 @@
-import { ClipboardList, FileCheck, Check } from 'lucide-react';
+import { ClipboardList, FileCheck, Users, Check } from 'lucide-react';
 
 const otherProducts = [
   {
@@ -31,23 +31,38 @@ const otherProducts = [
     ],
     icon: FileCheck,
   },
+  {
+    id: 'ilmia-book',
+    name: 'イルミアブック',
+    subtitle: 'ILMIA Book',
+    description: 'AI医療人材採用プラットフォーム。看護師・医療事務・リハビリ職まで、全職種の医療従事者が集まる無料の採用基盤。',
+    target: '医療機関全般',
+    price: '完全無料',
+    features: [
+      'AIマッチングで募集条件×スキルを自動提案',
+      '免許認証済み登録者・履歴書AI分析機能',
+      '初期費用・成功報酬・月額費用すべて0円',
+      '病院の活動PR用 無料広告掲載機能付き',
+    ],
+    icon: Users,
+  },
 ];
 
 export default function OtherProductsSection() {
   return (
-    <section id="other-products" className="py-20 md:py-28 px-5 sm:px-6 bg-white">
+    <section id="other-products" className="py-20 md:py-12 px-5 sm:px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         {/* Editorial heading */}
-        <div className="mb-12 md:mb-16 reveal">
+        <div className="mb-12 md:mb-8 reveal">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-xs font-bold tracking-[0.3em] text-[#D98324]">OTHER PRODUCTS</span>
             <div className="h-px flex-1 max-w-[80px] bg-[#D98324]/30" />
           </div>
-          <h2 className="text-[1.875rem] sm:text-4xl md:text-5xl font-bold text-[#3D2C1E] leading-tight">
-            さらに深く使いたい方へ
+          <h2 className="text-[1.625rem] sm:text-[2rem] md:text-5xl font-bold text-[#3D2C1E] leading-tight">
+            ILMIA 製品ラインナップ
           </h2>
           <p className="text-base sm:text-lg text-[#2C3E40]/80 max-w-2xl leading-[2] mt-5">
-            イルミアガイドと組み合わせることで、診察から請求まで一気通貫で最適化できます。
+            診察・請求・採用まで、クリニックの業務全体をILMIAの製品群がカバー。必要なものだけ、スモールスタートで始められます。
           </p>
         </div>
 
