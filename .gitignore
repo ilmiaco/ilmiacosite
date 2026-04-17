@@ -26,6 +26,7 @@ Thumbs.db
 
 # Claude
 .claude
+docs/superpowers/
 
 # Internal company data — do not commit
 kumano/

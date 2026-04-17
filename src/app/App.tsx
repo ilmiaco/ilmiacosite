@@ -16,13 +16,16 @@ import ContactSection from './components/sections/ContactSection';
 import Footer from './components/sections/Footer';
 import MobileFloatingCta from './components/sections/MobileFloatingCta';
 import NotFound from './components/sections/NotFound';
+import PrivacyPolicy from './components/sections/PrivacyPolicy';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const medicalProductUrl = 'https://medical.ilmiaco.com';
 
-  const isNotFound =
-    typeof window !== 'undefined' && window.location.pathname !== '/';
+  const pathname =
+    typeof window !== 'undefined' ? window.location.pathname : '/';
+  const isHome = pathname === '/';
+  const isPrivacyPolicy = pathname === '/privacy-policy';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -32,7 +35,11 @@ export default function App() {
 
   useReveal();
 
-  if (isNotFound) {
+  if (isPrivacyPolicy) {
+    return <PrivacyPolicy />;
+  }
+
+  if (!isHome) {
     return <NotFound />;
   }
 

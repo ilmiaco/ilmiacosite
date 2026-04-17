@@ -47,6 +47,7 @@ const ROUTES = [
   '/#products',
   '/#news',
   '/#contact',
+  '/privacy-policy',
 ];
 
 async function prerender() {

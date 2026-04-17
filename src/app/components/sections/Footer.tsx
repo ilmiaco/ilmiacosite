@@ -18,10 +18,10 @@ const footerColumns = (medicalProductUrl: string) => [
   {
     title: '企業情報',
     links: [
-      { text: '会社概要', href: '#about' },
-      { text: '導入シナリオ', href: '#scenarios' },
-      { text: '料金', href: '#pricing' },
-      { text: 'お問い合わせ', href: '#contact' },
+      { text: '会社概要', href: '/#about' },
+      { text: '導入シナリオ', href: '/#scenarios' },
+      { text: '料金', href: '/#pricing' },
+      { text: 'お問い合わせ', href: '/#contact' },
     ],
   },
 ];
@@ -86,10 +86,16 @@ export default function Footer({ medicalProductUrl }: FooterProps) {
         </div>
 
         {/* Copyright */}
-        <div className="mt-14 pt-6 border-t border-white/10">
-          <p className="text-center text-xs text-white/40 tracking-wide">
+        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-white/40 tracking-wide">
             &copy; 2026 ILMIA Inc. All rights reserved.
           </p>
+          <a
+            href="/privacy-policy"
+            className="text-xs text-white/50 hover:text-[#F0B254] transition-colors tracking-wide"
+          >
+            プライバシーポリシー
+          </a>
         </div>
       </div>
     </footer>
